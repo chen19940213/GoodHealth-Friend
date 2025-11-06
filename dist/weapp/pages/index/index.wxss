@@ -93,7 +93,6 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 614rpx;
   height: 106rpx;
 }
 .line-chart .chart-container .chart-canvas {
@@ -136,6 +135,562 @@
   width: 2rpx;
   height: 10rpx;
   background: #C6B2AB;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/DateTimePicker/index.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.date-time-picker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.date-time-picker .picker-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.date-time-picker .picker-content {
+  position: relative;
+  width: 100%;
+  max-width: 750rpx;
+  background: #FFF;
+  border-radius: 40rpx 40rpx 0 0;
+  z-index: 2001;
+  animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.date-time-picker .picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 40rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.date-time-picker .picker-header .header-back {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.date-time-picker .picker-header .header-back .back-icon {
+  font-size: 48rpx;
+  color: #333;
+  line-height: 1;
+  font-weight: 300;
+}
+.date-time-picker .picker-header .header-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+.date-time-picker .picker-header .header-close {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.date-time-picker .picker-header .header-close .close-icon {
+  font-size: 40rpx;
+  color: #333;
+  line-height: 1;
+}
+.date-time-picker .picker-body {
+  padding: 40rpx 0;
+  min-height: 400rpx;
+  position: relative;
+}
+.date-time-picker .picker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.date-time-picker .picker-view {
+  height: 400rpx;
+  width: 100%;
+  flex: 1;
+}
+.date-time-picker .time-separator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  margin-left: 20rpx;
+}
+.date-time-picker .time-separator text {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+.date-time-picker .picker-item {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date-time-picker .picker-item text {
+  font-size: 32rpx;
+  color: #333;
+}
+.date-time-picker .picker-footer {
+  padding: 32rpx 40rpx 60rpx;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.date-time-picker .picker-footer .confirm-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF5078;
+  color: #FFF;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-radius: 44rpx;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.date-time-picker .picker-footer .confirm-button:active {
+  background: #E03D5F;
+  transform: scale(0.98);
+}
+.date-time-picker .picker-footer .confirm-button::after {
+  border: none;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/SuccessModal/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.success-modal .modal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.success-modal .modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 750rpx;
+  background: linear-gradient(180deg, #FFE5E5 0%, #FFF9F9 100%);
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 60rpx 40rpx 80rpx;
+  box-sizing: border-box;
+  z-index: 2001;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.success-modal .close-button {
+  position: absolute;
+  top: 32rpx;
+  right: 32rpx;
+  width: 56rpx;
+  height: 56rpx;
+  background: #FF5078;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.success-modal .close-button:active {
+  transform: scale(0.9);
+  background: #E03D5F;
+}
+.success-modal .close-button .close-icon {
+  width: 24rpx;
+  height: 24rpx;
+  position: relative;
+}
+.success-modal .close-button .close-icon::before, .success-modal .close-button .close-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18rpx;
+  height: 2rpx;
+  background: #FFF;
+  border-radius: 1rpx;
+}
+.success-modal .close-button .close-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.success-modal .close-button .close-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.success-modal .modal-title {
+  display: block;
+  text-align: center;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16rpx;
+}
+.success-modal .modal-subtitle {
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 48rpx;
+}
+.success-modal .weight-display {
+  text-align: center;
+  margin: 40rpx 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4rpx;
+}
+.success-modal .weight-display .weight-integer {
+  font-size: 120rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+  letter-spacing: -4rpx;
+}
+.success-modal .weight-display .weight-decimal {
+  font-size: 48rpx;
+  color: #333;
+  line-height: 1;
+  font-weight: normal;
+}
+.success-modal .motivational-text {
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 48rpx;
+  line-height: 1.6;
+}
+.success-modal .complete-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF5078;
+  color: #FFF;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-radius: 44rpx;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.success-modal .complete-button:active {
+  background: #E03D5F;
+  transform: scale(0.98);
+}
+.success-modal .complete-button::after {
+  border: none;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/RecordWeightModal/index.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.record-weight-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.record-weight-modal .modal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.record-weight-modal .modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 750rpx;
+  background: #FFF9E6;
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 40rpx 32rpx 60rpx;
+  box-sizing: border-box;
+  z-index: 1001;
+  animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.record-weight-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32rpx;
+}
+.record-weight-modal .modal-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+.record-weight-modal .modal-header .header-left .header-icon {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+}
+.record-weight-modal .modal-header .header-left .header-icon .icon-scale {
+  width: 60rpx;
+  height: 60rpx;
+  background: #FFD700;
+  border-radius: 50%;
+  position: relative;
+}
+.record-weight-modal .modal-header .header-left .header-icon .icon-scale::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rpx;
+  height: 40rpx;
+  border: 3rpx solid #333;
+  border-radius: 50%;
+}
+.record-weight-modal .modal-header .header-left .header-icon .icon-scale::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rpx;
+  height: 20rpx;
+  background: #333;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(-30deg);
+}
+.record-weight-modal .modal-header .header-left .header-icon .icon-badge {
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+  background: #FF5078;
+  color: #FFF;
+  font-size: 12rpx;
+  font-weight: bold;
+  padding: 2rpx 8rpx;
+  border-radius: 4rpx;
+  white-space: nowrap;
+}
+.record-weight-modal .modal-header .header-left .header-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+}
+.record-weight-modal .modal-header .header-close {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.record-weight-modal .modal-header .header-close .close-icon {
+  font-size: 40rpx;
+  color: #333;
+  line-height: 1;
+}
+.record-weight-modal .date-time-selector {
+  padding: 16rpx 0;
+  margin-bottom: 32rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.record-weight-modal .date-time-selector .date-time-text {
+  font-size: 28rpx;
+  color: #333;
+}
+.record-weight-modal .mood-section,
+.record-weight-modal .menstruation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+.record-weight-modal .mood-section .section-label,
+.record-weight-modal .menstruation-section .section-label {
+  font-size: 28rpx;
+  color: #333;
+}
+.record-weight-modal .mood-options {
+  display: flex;
+  gap: 12rpx;
+  align-items: center;
+}
+.record-weight-modal .mood-options .mood-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rpx;
+  cursor: pointer;
+  min-width: 60rpx;
+}
+.record-weight-modal .mood-options .mood-item .mood-indicator {
+  width: 56rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #F0F0F0;
+  transition: all 0.3s;
+}
+.record-weight-modal .mood-options .mood-item .mood-label {
+  font-size: 20rpx;
+  color: #999;
+  transition: all 0.3s;
+}
+.record-weight-modal .mood-options .mood-item.active .mood-indicator {
+  background: #FF5078;
+}
+.record-weight-modal .mood-options .mood-item.active .mood-label {
+  color: #333;
+  font-weight: 500;
+}
+.record-weight-modal .toggle-switch {
+  width: 80rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  background: #E0E0E0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.record-weight-modal .toggle-switch.on {
+  background: #FF5078;
+}
+.record-weight-modal .toggle-switch.on .toggle-handle {
+  transform: translateX(36rpx);
+}
+.record-weight-modal .toggle-switch .toggle-handle {
+  position: absolute;
+  top: 4rpx;
+  left: 4rpx;
+  width: 36rpx;
+  height: 36rpx;
+  background: #FFF;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.record-weight-modal .weight-display {
+  text-align: center;
+  margin: 48rpx 0 40rpx;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2rpx;
+}
+.record-weight-modal .weight-display .weight-integer {
+  font-size: 80rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+  letter-spacing: -2rpx;
+}
+.record-weight-modal .weight-display .weight-decimal {
+  font-size: 32rpx;
+  color: #999;
+  line-height: 1;
+  font-weight: normal;
+}
+.record-weight-modal .keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+.record-weight-modal .keypad .keypad-button {
+  height: 96rpx;
+  background: #FFF9E6;
+  border: 1rpx solid rgba(0, 0, 0, 0.08);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.02);
+}
+.record-weight-modal .keypad .keypad-button:active {
+  background: #FFF0CC;
+  transform: scale(0.96);
+  box-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.05);
+}
+.record-weight-modal .keypad .keypad-button .keypad-text {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: 500;
+}
+.record-weight-modal .submit-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF5078;
+  color: #FFF;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-radius: 44rpx;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.record-weight-modal .submit-button:active {
+  background: #E03D5F;
+  transform: scale(0.98);
+}
+.record-weight-modal .submit-button::after {
+  border: none;
 }
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
@@ -318,9 +873,6 @@
 .page-index-view .progress-card .record-button:active {
   opacity: 0.9;
 }
-.page-index-view .progress-card .chart-section {
-  margin-top: 48rpx;
-}
 .page-index-view .progress-section {
   position: relative;
   z-index: 1;
@@ -329,4 +881,27 @@
   background: #FFF1E4;
   border-radius: 40rpx;
   margin-top: 40rpx;
+}
+.page-skeleton__footer {
+  padding: 24rpx;
+  background: #FEFEFE;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.page-skeleton__footer .record-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF4E77;
+  border: 3rpx solid #000000;
+  border-radius: 44rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 0;
+  box-shadow: inset 0rpx -10rpx 0rpx 0rpx rgba(0, 0, 0, 0.25);
+}
+.page-skeleton__footer .record-button:active {
+  opacity: 0.9;
+}
+.page-skeleton__footer .record-button::after {
+  border: none;
 }

@@ -23,12 +23,6 @@ export default {
         text: '首页',
       },
       {
-        iconPath: './assets/tabs/calendar.png',
-        selectedIconPath: './assets/tabs/calendar_selected.png',
-        pagePath: 'pages/calendar-trend/calendar-trend',
-        text: '日历趋势',
-      },
-      {
         iconPath: './assets/tabs/my.png',
         selectedIconPath: './assets/tabs/my_selected.png',
         pagePath: 'pages/my/my',

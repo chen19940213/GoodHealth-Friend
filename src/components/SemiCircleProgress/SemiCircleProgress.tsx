@@ -130,34 +130,50 @@ export default class SemiCircleProgress extends Component<SemiCircleProgressProp
           startAngle: 180,
           endAngle: 0,
           min: 0,
-          max: 100,
-          splitNumber: 0,
-          axisLine: {
-            lineStyle: {
-              width: 20,
-              color: [
-                [progress / 100, '#FF5078'],
-                [1, '#F4F4F4'],
-              ],
-            },
+          max: 240,
+          splitNumber: false,
+          progress: {
+            show: true,
+            roundCap: true,
+            width: 9
           },
-          pointer: {
-            show: false,
+         splitLine: {
+             show: false  // 完全隐藏分割线
+           },
+          axisLine: {
+            roundCap: true,
+            lineStyle: {
+              width: 9
+            }
           },
           axisTick: {
-            show: false,
+            splitNumber: 0,
+            lineStyle: {
+              width: 0,
+              color: '#999'
+            }
           },
-          splitLine: {
-            show: false,
-          },
+         
           axisLabel: {
-            show: false,
+            distance: 30,
+            color: '#999',
+            fontSize: 20,
+            show:false
+          },
+          data: [
+            {
+              value: 100,
+              show:false
+            }
+          ],
+          pointer:{
+            show:false
           },
           detail: {
-            show: false,
-          },
-        },
-      ],
+               show: false  // 隐藏详情标签（通常显示在中心）
+           },
+        }
+      ]
     };
 
     this.chart.setOption(option);
@@ -192,9 +208,7 @@ export default class SemiCircleProgress extends Component<SemiCircleProgressProp
             <View className='weight-label'>最新 (公斤)</View>
           </View>
 
-          {/* 起点和终点标记 */}
-          <View className='start-point' />
-          <View className='end-point' />
+        
         </View>
 
         {/* 底部信息 */}

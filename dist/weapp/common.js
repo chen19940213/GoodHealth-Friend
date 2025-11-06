@@ -534,6 +534,147 @@ var Http = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/components/PageSkeleton/index.tsx":
+/*!***********************************************!*\
+  !*** ./src/components/PageSkeleton/index.tsx ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony import */ var C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tarojs/taro */ "./node_modules/@tarojs/taro/index.js");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+// PageSkeleton 组件属性接口
+
+// 全局选项接口
+
+// 全局选项存储
+var globalOptions = {};
+
+// PageSkeleton 组件实现
+var PageSkeletonComponent = function PageSkeletonComponent(props) {
+  var className = props.className,
+    children = props.children;
+
+  // 胶囊按钮信息
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState2 = (0,C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_useState, 2),
+    capsuleHeight = _useState2[0],
+    setCapsuleHeight = _useState2[1];
+  // 胶囊按钮顶部位置
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState4 = (0,C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_useState3, 2),
+    capsuleTop = _useState4[0],
+    setCapsuleTop = _useState4[1];
+  // 安全区域信息
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState6 = (0,C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_useState5, 2),
+    safeAreaBottom = _useState6[0],
+    setSafeAreaBottom = _useState6[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    // 获取胶囊按钮信息
+    try {
+      var menuButton = _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().getMenuButtonBoundingClientRect();
+      if (menuButton) {
+        if (menuButton.height) {
+          setCapsuleHeight(menuButton.height);
+        }
+        if (menuButton.top !== undefined) {
+          setCapsuleTop(menuButton.top);
+        }
+      }
+    } catch (error) {
+      console.warn('获取胶囊按钮信息失败:', error);
+    }
+
+    // 获取安全区域信息
+    try {
+      var systemInfo = _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().getSystemInfoSync();
+      var safeArea = systemInfo.safeArea;
+      if (safeArea) {
+        // 计算底部安全区域高度 = 屏幕高度 - 安全区域底部
+        var screenHeight = systemInfo.screenHeight || systemInfo.windowHeight || 0;
+        var safeAreaBottomValue = screenHeight - (safeArea.bottom || 0);
+        setSafeAreaBottom(safeAreaBottomValue);
+      }
+    } catch (error) {
+      console.warn('获取安全区域信息失败:', error);
+    }
+
+    // 组件卸载时调用 onPageUnload
+    return function () {
+      if (globalOptions.onPageUnload) {
+        globalOptions.onPageUnload();
+      }
+    };
+  }, []);
+
+  // 分离具名插槽
+  var headerSlot = null;
+  var bodySlot = null;
+  var footerSlot = null;
+  react__WEBPACK_IMPORTED_MODULE_0___default().Children.forEach(children, function (child) {
+    if (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().isValidElement(child) && child.key) {
+      if (child.key === 'header') {
+        headerSlot = child;
+      } else if (child.key === 'body') {
+        bodySlot = child;
+      } else if (child.key === 'footer') {
+        footerSlot = child;
+      }
+    }
+  });
+
+  // 如果没有找到具名插槽，将所有 children 作为 body
+  if (!headerSlot && !bodySlot && !footerSlot && children) {
+    bodySlot = children;
+  }
+
+  // 自定义插槽渲染
+  var customSlot = globalOptions.customSlotRender ? globalOptions.customSlotRender(props) : null;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
+    className: "page-skeleton ".concat(className || ''),
+    children: [customSlot, headerSlot && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
+      className: "page-skeleton__header",
+      style: {
+        height: capsuleTop && capsuleHeight ? "".concat(capsuleTop + capsuleHeight, "px") : 'auto',
+        minHeight: capsuleHeight ? "".concat(capsuleHeight, "px") : 'auto'
+      },
+      children: headerSlot
+    }), bodySlot && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
+      className: "page-skeleton__body",
+      children: bodySlot
+    }), footerSlot && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
+      className: "page-skeleton__footer",
+      style: {
+        paddingBottom: safeAreaBottom ? "".concat(safeAreaBottom, "px") : '0'
+      },
+      children: footerSlot
+    })]
+  });
+};
+
+// 创建 PageSkeleton 组件，包含静态方法
+var PageSkeleton = Object.assign(PageSkeletonComponent, {
+  setGlobalOptions: function setGlobalOptions(options) {
+    globalOptions = (0,C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_5__["default"])((0,C_Users_Desktop_GoodHealth_Friend_main_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_5__["default"])({}, globalOptions), options);
+  }
+});
+/* harmony default export */ __webpack_exports__["default"] = (PageSkeleton);
+
+/***/ }),
+
 /***/ "./src/constants/app.const.ts":
 /*!************************************!*\
   !*** ./src/constants/app.const.ts ***!

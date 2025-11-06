@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { observer } from 'mobx-react';
 import { View, Text, Button } from '@tarojs/components';
 import {
-  PageSkeleton,
+
   OssImage,
   Native,
   SafeAreaView,
@@ -17,6 +17,7 @@ import { jumpToAnyUrl } from '@/utils/jumpTo';
 import { noListIcon, settingsIcon } from '@/assets/index';
 import CardCell from '@/components/cardCell';
 import { requestWxLoginMockApi } from '@/services/apis/login.api';
+import PageSkeleton from '@/components/PageSkeleton';
 
 @observer
 export default class My extends Component {

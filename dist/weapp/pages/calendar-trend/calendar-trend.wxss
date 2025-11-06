@@ -154,13 +154,232 @@
 .calendar .calendar-days .calendar-day.empty {
   visibility: hidden;
 }
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/TrendChart/index.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.trend-chart {
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx 0;
+}
+.trend-chart .chart-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/MonthlyStats/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.monthly-stats {
+  padding: 32rpx 24rpx;
+  background: #FFF;
+  border-radius: 24rpx;
+  margin: 24rpx;
+}
+.monthly-stats .stats-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 32rpx;
+}
+.monthly-stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32rpx 24rpx;
+}
+.monthly-stats .stats-grid .stats-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+.monthly-stats .stats-grid .stats-item .stats-label {
+  font-size: 24rpx;
+  color: #666;
+}
+.monthly-stats .stats-grid .stats-item .stats-value {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  font-family: DIN, sans-serif;
+}
+.monthly-stats .stats-grid .stats-item .stats-value.highlight {
+  color: #FF5078;
+}
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/calendar-trend/calendar-trend.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .page-calendar-trend-view {
-  background-color: #F5F7FB;
+  background: #FFDDE5;
   min-height: 100vh;
 }
-.page-calendar-trend-view .calendar-container {
-  padding: 40rpx 32rpx;
+.page-calendar-trend-view :global(.page-skeleton__header) {
+  height: auto !important;
+  background: #FFDDE5;
+  position: relative;
+  z-index: 10;
+}
+.page-calendar-trend-view .header-wrapper {
+  background: #FFDDE5;
+  width: 100%;
+  position: relative;
+}
+.page-calendar-trend-view .nav-bar {
+  background: #FFDDE5;
+  padding: 0 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.page-calendar-trend-view .nav-bar .nav-back {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-calendar-trend-view .nav-bar .nav-back .back-icon {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
+}
+.page-calendar-trend-view .nav-bar .nav-title {
+  flex: 1;
+  text-align: center;
+}
+.page-calendar-trend-view .nav-bar .nav-title .title-text {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+}
+.page-calendar-trend-view .nav-bar .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  justify-content: flex-end;
+}
+.page-calendar-trend-view .nav-bar .nav-actions .action-icon {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.page-calendar-trend-view .nav-bar .nav-actions .action-icon .icon-text {
+  font-size: 20rpx;
+  color: #333;
+  line-height: 1;
+}
+.page-calendar-trend-view .tab-header {
+  background: #FFDDE5;
+  padding: 20rpx 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-calendar-trend-view .tab-header .tab-container {
+  display: flex;
+  background: #FFF;
+  border-radius: 12rpx;
+  padding: 4rpx;
+  gap: 4rpx;
+  width: 100%;
+  max-width: 400rpx;
+}
+.page-calendar-trend-view .tab-header .tab-container .tab-item {
+  flex: 1;
+  padding: 12rpx 32rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.page-calendar-trend-view .tab-header .tab-container .tab-item .tab-text {
+  font-size: 28rpx;
+  color: #FF5078;
+  font-weight: 500;
+}
+.page-calendar-trend-view .tab-header .tab-container .tab-item.active {
+  background: #FF5078;
+}
+.page-calendar-trend-view .tab-header .tab-container .tab-item.active .tab-text {
+  color: #FFF;
+  font-weight: 600;
+}
+.page-calendar-trend-view .content-section {
+  padding: 24rpx;
+  background: #FFF;
+  border-radius: 24rpx 24rpx 0 0;
+  margin: 0 24rpx 24rpx;
+  min-height: 400rpx;
+}
+.page-calendar-trend-view .content-section .calendar-wrapper {
+  width: 100%;
+}
+.page-calendar-trend-view .content-section .calendar-wrapper :global(.calendar) {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.page-calendar-trend-view .content-section .trend-wrapper {
+  width: 100%;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header {
+  padding: 20rpx 0;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16rpx;
+  padding-left: 12rpx;
+  border-left: 4rpx solid #409EFF;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-summary {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 24rpx;
+  line-height: 1.6;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-summary .highlight {
+  font-weight: 600;
+  color: #333;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 20rpx;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend .legend-item .legend-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend .legend-item .legend-dot.pink {
+  background: #FF5078;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend .legend-item .legend-dot.gray {
+  background: #999999;
+}
+.page-calendar-trend-view .content-section .trend-wrapper .trend-header .trend-legend .legend-item .legend-text {
+  font-size: 24rpx;
+  color: #666;
 }

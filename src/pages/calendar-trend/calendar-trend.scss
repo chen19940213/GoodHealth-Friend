@@ -1,9 +1,206 @@
 .page-calendar-trend-view {
-  background-color: #F5F7FB;
+  background: #FFDDE5;
   min-height: 100vh;
 
-  .calendar-container {
-    padding: 40px 32px;
+  // Header 区域样式覆盖
+  :global(.page-skeleton__header) {
+    height: auto !important;
+    background: #FFDDE5;
+    position: relative;
+    z-index: 10;
+  }
+
+  .header-wrapper {
+    background: #FFDDE5;
+    width: 100%;
+    position: relative;
+  }
+
+  .nav-bar {
+    background: #FFDDE5;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    .nav-back {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .back-icon {
+        font-size: 32px;
+        color: #333;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+
+    .nav-title {
+      flex: 1;
+      text-align: center;
+
+      .title-text {
+        font-size: 32px;
+        font-weight: 500;
+        color: #333;
+      }
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-end;
+
+      .action-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+        border-radius: 50%;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        .icon-text {
+          font-size: 20px;
+          color: #333;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .tab-header {
+    background: #FFDDE5;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tab-container {
+      display: flex;
+      background: #FFF;
+      border-radius: 12px;
+      padding: 4px;
+      gap: 4px;
+      width: 100%;
+      max-width: 400px;
+
+      .tab-item {
+        flex: 1;
+        padding: 12px 32px;
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        .tab-text {
+          font-size: 28px;
+          color: #FF5078;
+          font-weight: 500;
+        }
+
+        &.active {
+          background: #FF5078;
+
+          .tab-text {
+            color: #FFF;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .content-section {
+    padding: 24px;
+    background: #FFF;
+    border-radius: 24px 24px 0 0;
+    margin: 0 24px 24px;
+    min-height: 400px;
+
+    .calendar-wrapper {
+      width: 100%;
+      
+      // 移除日历组件的背景和内边距，因为已经在 content-section 中设置了
+      :global(.calendar) {
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+    .trend-wrapper {
+      width: 100%;
+
+      .trend-header {
+        padding: 20px 0;
+
+        .trend-title {
+          display: block;
+          font-size: 32px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 16px;
+          padding-left: 12px;
+          border-left: 4px solid #409EFF;
+        }
+
+        .trend-summary {
+          display: block;
+          font-size: 24px;
+          color: #666;
+          margin-bottom: 24px;
+          line-height: 1.6;
+
+          .highlight {
+            font-weight: 600;
+            color: #333;
+          }
+        }
+
+        .trend-legend {
+          display: flex;
+          gap: 24px;
+          margin-bottom: 20px;
+
+          .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .legend-dot {
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+
+              &.pink {
+                background: #FF5078;
+              }
+
+              &.gray {
+                background: #999999;
+              }
+            }
+
+            .legend-text {
+              font-size: 24px;
+              color: #666;
+            }
+          }
+        }
+      }
+    }
   }
 }
-

@@ -1369,11 +1369,13 @@ if (false) { var oldDiffedHook, oldVNodeHook, options; }
 /* harmony export */   Camera: function() { return /* binding */ Camera; },
 /* harmony export */   Image: function() { return /* binding */ Image; },
 /* harmony export */   Input: function() { return /* binding */ Input; },
+/* harmony export */   PickerView: function() { return /* binding */ PickerView; },
+/* harmony export */   PickerViewColumn: function() { return /* binding */ PickerViewColumn; },
 /* harmony export */   Text: function() { return /* binding */ Text; },
 /* harmony export */   View: function() { return /* binding */ View; },
 /* harmony export */   WebView: function() { return /* binding */ WebView; }
 /* harmony export */ });
-/* unused harmony exports Ad, AdCustom, Audio, Block, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, DoubleTapGestureHandler, DraggableSheet, Editor, ForcePressGestureHandler, Form, FunctionalPageNavigator, GridBuilder, GridView, HorizontalDragGestureHandler, Icon, KeyboardAccessory, Label, ListBuilder, ListView, LivePlayer, LivePusher, LongPressGestureHandler, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, NestedScrollBody, NestedScrollHeader, OfficialAccount, OpenContainer, OpenData, PageContainer, PageMeta, PanGestureHandler, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ScaleGestureHandler, ScrollView, ShareElement, Slider, Slot, Snapshot, Span, StickyHeader, StickySection, Swiper, SwiperItem, Switch, TapGestureHandler, Textarea, VerticalDragGestureHandler, Video, VoipRoom */
+/* unused harmony exports Ad, AdCustom, Audio, Block, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, DoubleTapGestureHandler, DraggableSheet, Editor, ForcePressGestureHandler, Form, FunctionalPageNavigator, GridBuilder, GridView, HorizontalDragGestureHandler, Icon, KeyboardAccessory, Label, ListBuilder, ListView, LivePlayer, LivePusher, LongPressGestureHandler, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, NestedScrollBody, NestedScrollHeader, OfficialAccount, OpenContainer, OpenData, PageContainer, PageMeta, PanGestureHandler, Picker, Progress, Radio, RadioGroup, RichText, RootPortal, ScaleGestureHandler, ScrollView, ShareElement, Slider, Slot, Snapshot, Span, StickyHeader, StickySection, Swiper, SwiperItem, Switch, TapGestureHandler, Textarea, VerticalDragGestureHandler, Video, VoipRoom */
 var View = 'view';
 var Icon = 'icon';
 var Progress = 'progress';

@@ -5,6 +5,7 @@ import './Calendar.scss';
 
 interface CalendarProps {
   onDateSelect?: (date: string) => void;
+  weightData?: Array<{ date: string; weight: number }>; // 体重数据
 }
 
 interface CalendarState {
@@ -80,31 +81,21 @@ export default class Calendar extends Component<CalendarProps, CalendarState> {
     }
   };
 
-  // 获取日期对应的体重数据（模拟数据，实际应从props传入）
+  // 获取日期对应的体重数据
   getDayWeight = (date: string) => {
     if (!date) return null;
     
-    // 这里可以根据实际需求传入体重数据
-    // 暂时返回一些示例数据用于测试显示效果
-    // 实际使用时应该从props传入或从API获取
-    const dateObj = dayjs(date);
-    const day = dateObj.date();
+    const { weightData } = this.props;
+    if (!weightData || weightData.length === 0) return null;
     
-    // 模拟数据：某些日期有体重数据
-    const mockDays = [1, 2, 3, 4, 7, 14, 20, 22, 29];
-    if (mockDays.includes(day)) {
-      // 根据日期生成不同的体重值
-      const baseWeight = 40.0;
-      const variation = (day % 10) * 0.1;
-      return (baseWeight + variation).toFixed(2);
-    }
-    
-    return null;
+    const data = weightData.find(item => item.date === date);
+    return data ? data.weight.toFixed(2) : null;
   };
 
-  // 判断日期是否有星星标记
-  hasStar = (_date: string) => {
-    // 这里可以根据实际需求判断
+  // 判断日期是否有星星标记（可以根据实际需求判断，比如特殊日期）
+  hasStar = (date: string) => {
+    // 这里可以根据实际需求判断，比如标记特殊日期
+    // 暂时返回 false
     return false;
   };
 

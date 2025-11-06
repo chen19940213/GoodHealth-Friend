@@ -261,7 +261,7 @@ export default class LineChart extends Component<LineChartProps, LineChartState>
             canvas-id={this.canvasId}
             echarts={echarts}
             ec={this.state.ec}
-            style={{ width: `${width}px`, height: `${height}px`, display: 'block' }}
+            style={{ width: `100%`, height: `${height}px`, display: 'block' }}
             className='chart-canvas'
           />
         </View>
