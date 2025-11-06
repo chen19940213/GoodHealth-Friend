@@ -1,0 +1,218 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/result/result.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-result-view {
+  position: relative;
+  background-color: #020202;
+}
+.page-result-view .custom-page-header .title-text {
+  font-size: 32rpx !important;
+}
+.page-result-view .custom-page-header .left-zone {
+  background-image: url("https://m.hellobike.com/8133e1b1_back_white_icon.png");
+  background-size: 48rpx 48rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-result-view .content-card {
+  width: 670rpx;
+  height: 1272rpx;
+  position: relative;
+  margin: 40rpx auto 0;
+  padding: 56rpx 40rpx 0;
+  background-image: url("https://m.hellobike.com/resource/gallery/92/Lw0SD8W5_taichi_image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5rpx;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.page-result-view .content-card .title-section {
+  text-align: center;
+}
+.page-result-view .content-card .title-section .title-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24rpx;
+  margin-bottom: 44rpx;
+}
+.page-result-view .content-card .title-section .title-header .line {
+  width: 47rpx;
+  height: 2rpx;
+  background: #323232;
+}
+.page-result-view .content-card .title-section .title-header .title-text {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #323232;
+}
+.page-result-view .content-card .title-section .result-status {
+  font-family: Philosopher, sans-serif;
+  font-size: 60rpx;
+  font-weight: 700;
+  color: #020202;
+  line-height: 1;
+  margin-bottom: 14rpx;
+}
+.page-result-view .content-card .title-section .result-tip {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #7B7B7B;
+}
+.page-result-view .content-card .img-section {
+  margin: 28rpx 0 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-result-view .content-card .img-section .product-image-container {
+  position: relative;
+  width: 278rpx;
+  height: 342rpx;
+}
+.page-result-view .content-card .img-section .product-image-container .product-image {
+  width: 278rpx;
+  height: 342rpx;
+}
+.page-result-view .content-card .img-section .product-image-container .verify-badge {
+  width: 132rpx;
+  height: 132rpx;
+  position: absolute;
+  right: -100rpx;
+  bottom: -30rpx;
+}
+.page-result-view .content-card .appraiser-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.page-result-view .content-card .appraiser-info .appraiser-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.page-result-view .content-card .appraiser-info .appraiser-badge {
+  display: flex;
+  align-items: center;
+  height: 26rpx;
+  width: 120rpx;
+  background: #000;
+  border-radius: 13rpx;
+  margin-right: 3rpx;
+  position: relative;
+}
+.page-result-view .content-card .appraiser-info .appraiser-badge .verified-icon {
+  position: absolute;
+  top: 0;
+  left: -2rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+.page-result-view .content-card .appraiser-info .appraiser-badge .badge-text {
+  font-size: 16rpx;
+  font-weight: 600;
+  color: #DEFC52;
+  margin-left: auto;
+  margin-right: 10rpx;
+}
+.page-result-view .content-card .appraiser-info .appraiser-name {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #000;
+  margin-top: 8rpx;
+  line-height: 1;
+}
+.page-result-view .content-card .description {
+  margin: 24rpx 0 0;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #595959;
+  line-height: 1.5;
+}
+.page-result-view .content-card .analysis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32rpx 12rpx 0 0;
+}
+.page-result-view .content-card .analysis-header .analysis-title {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 28rpx;
+  letter-spacing: 2rpx;
+}
+.page-result-view .content-card .analysis-header .header-right {
+  display: flex;
+  align-items: center;
+}
+.page-result-view .content-card .analysis-header .header-right .analysis-count {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 28rpx;
+  letter-spacing: 2rpx;
+  margin-right: 6rpx;
+}
+.page-result-view .content-card .check-success-icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+.page-result-view .content-card .check-list {
+  margin: 32rpx 12rpx 0 0;
+}
+.page-result-view .content-card .check-list .check-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+.page-result-view .content-card .check-list .check-item .check-label {
+  font-size: 24rpx;
+  font-weight: 300;
+  color: #595959;
+}
+.page-result-view .content-card .check-list .check-item .divider-line {
+  flex: 1;
+  height: 0;
+  margin: 0 12rpx;
+  border-bottom: 1rpx dashed #ADADAD;
+}
+.page-result-view .content-card .info-section {
+  margin: 30rpx 28rpx 0 0;
+}
+.page-result-view .content-card .info-section .info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14rpx;
+}
+.page-result-view .content-card .info-section .info-row:last-child {
+  margin-bottom: 0;
+}
+.page-result-view .content-card .info-section .info-row .info-label {
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #595959;
+  line-height: 28rpx;
+  letter-spacing: 2rpx;
+}
+.page-result-view .content-card .info-section .info-row .info-value {
+  font-family: "PingFang SC", sans-serif;
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #595959;
+  line-height: 28rpx;
+  letter-spacing: 2rpx;
+  margin-right: 16rpx;
+}
+.page-result-view .footer-tip {
+  display: block;
+  text-align: center;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 28rpx;
+}

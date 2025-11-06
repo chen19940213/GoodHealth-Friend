@@ -1,0 +1,18 @@
+@use './mixin.scss';
+@use './var.scss';  
+
+.border-bottom-line {
+    @include mixin.border_line($color: var.$gray-e, $pos: 'bottom', $type: solid);
+}
+
+.border-top-line {
+    @include mixin.border_line($color: var.$gray-e, $pos: 'top', $type: solid);
+}
+
+.border-left-line {
+    @include mixin.border_line($color: var.$gray-e, $pos: 'left', $type: solid);
+}
+
+.border-right-line {
+    @include mixin.border_line($color: var.$gray-e, $pos: 'right', $type: solid);
+}

@@ -1,0 +1,125 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/profile/profile.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-profile-view {
+  background: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page-profile-view .nav-bar {
+  position: relative;
+  height: 162rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 22rpx;
+}
+.page-profile-view .nav-bar .back-btn {
+  position: absolute;
+  left: 28rpx;
+  bottom: 22rpx;
+  width: 33.2rpx;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.page-profile-view .nav-bar .back-btn .back-icon {
+  width: 20rpx;
+  height: 36rpx;
+  border-left: 2rpx solid #000;
+  border-bottom: 2rpx solid #000;
+  transform: rotate(45deg);
+}
+.page-profile-view .nav-bar .nav-title {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.4;
+}
+.page-profile-view .avatar-section {
+  padding: 106rpx 0 80rpx;
+  display: flex;
+  justify-content: center;
+}
+.page-profile-view .avatar-section .avatar-container {
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+}
+.page-profile-view .avatar-section .avatar-container .user-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: #D3F8FF;
+  border: none;
+}
+.page-profile-view .settings-item {
+  margin: 0 36rpx;
+  padding: 0 44rpx;
+  background: #F5F5F5;
+  border-radius: 32rpx;
+  display: flex;
+  align-items: center;
+  height: 112rpx;
+  cursor: pointer;
+}
+.page-profile-view .settings-item .item-label {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #879099;
+  line-height: 1.4;
+  margin-right: 32rpx;
+}
+.page-profile-view .settings-item .item-value {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-profile-view .settings-item .nickname-input {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #242729;
+  line-height: 1.4;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.page-profile-view .settings-item .nickname-input::-moz-placeholder {
+  color: #879099;
+}
+.page-profile-view .settings-item .nickname-input::placeholder {
+  color: #879099;
+}
+.page-profile-view .settings-item .item-arrow {
+  width: 24rpx;
+  height: 24rpx;
+  position: relative;
+  margin-left: 16rpx;
+}
+.page-profile-view .settings-item .item-arrow::before, .page-profile-view .settings-item .item-arrow::after {
+  content: "";
+  position: absolute;
+  background: #879099;
+}
+.page-profile-view .settings-item .item-arrow::before {
+  width: 2rpx;
+  height: 10.66rpx;
+  top: 2.64rpx;
+  right: 6.82rpx;
+  transform: rotate(45deg);
+}
+.page-profile-view .settings-item .item-arrow::after {
+  width: 2rpx;
+  height: 10.66rpx;
+  bottom: 2.64rpx;
+  right: 6.82rpx;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,179 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/my/my.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-my-view {
+  background: #FFFFFF;
+  min-height: 100vh;
+  position: relative;
+}
+.page-my-view .top-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 292rpx;
+  background: linear-gradient(180deg, #FFDDE5 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
+}
+.page-my-view > div {
+  position: relative;
+  z-index: 1;
+}
+.page-my-view .user-section {
+  position: relative;
+  z-index: 1;
+  padding: 160rpx 28rpx 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.page-my-view .user-section .user-info-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24rpx;
+}
+.page-my-view .user-section .user-info-container .user-avatar {
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 50%;
+  background: #FFD5DF;
+  flex-shrink: 0;
+  border: none;
+}
+.page-my-view .user-section .user-info-container .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  padding-top: 16rpx;
+}
+.page-my-view .user-section .user-info-container .user-info .user-nickname {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-my-view .user-section .user-info-container .user-info .login-text-btn {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #242729;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  line-height: 1.4;
+}
+.page-my-view .user-section .settings-icon-wrapper {
+  width: 44rpx;
+  height: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-my-view .user-section .settings-icon-wrapper .settings-icon {
+  width: 22rpx;
+  height: 22rpx;
+  background: #FF5078;
+  border-radius: 50%;
+}
+.page-my-view .reason-section {
+  position: relative;
+  z-index: 1;
+  padding: 28rpx 28rpx 0;
+  margin-top: 40rpx;
+}
+.page-my-view .reason-section .reason-text {
+  font-size: 24rpx;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-my-view .tags-section {
+  position: relative;
+  z-index: 1;
+  padding: 32rpx 28rpx;
+  display: flex;
+  gap: 24rpx;
+  flex-wrap: wrap;
+}
+.page-my-view .tags-section .tag-item {
+  height: 66rpx;
+  padding: 0 24rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+}
+.page-my-view .tags-section .tag-item .tag-icon {
+  width: 30rpx;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.page-my-view .tags-section .tag-item .tag-text {
+  font-size: 24rpx;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-my-view .feedback-card {
+  position: relative;
+  z-index: 1;
+  margin: 28rpx;
+  padding: 32rpx;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  box-shadow: 0rpx 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 24rpx;
+}
+.page-my-view .feedback-card .feedback-avatar {
+  width: 154rpx;
+  height: 158rpx;
+  background: #FF4D76;
+  border-radius: 24rpx;
+  flex-shrink: 0;
+}
+.page-my-view .feedback-card .feedback-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+.page-my-view .feedback-card .feedback-content .feedback-title {
+  font-size: 28rpx;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-my-view .feedback-card .feedback-content .feedback-subtitle {
+  font-size: 28rpx;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-my-view .action-buttons {
+  position: relative;
+  z-index: 1;
+  padding: 28rpx;
+  display: flex;
+  gap: 24rpx;
+}
+.page-my-view .action-buttons .action-btn {
+  flex: 1;
+  height: 74rpx;
+  background: #FF4E77;
+  border: 3rpx solid #000000;
+  border-radius: 62rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  font-weight: 600;
+  box-shadow: inset 0rpx -8rpx 0rpx 0rpx rgba(0, 0, 0, 0.25);
+}
+.page-my-view .action-buttons .action-btn.primary {
+  background: #FF4E77;
+}
+.page-my-view .action-buttons .action-btn:active {
+  opacity: 0.9;
+}

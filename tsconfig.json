@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "jsx": "preserve",
+    "jsxFactory": "Taro.createElement",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "typings/global.d.ts"
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+      ,"@hb/taro-fusion-components": ["./src/shims/hb-taro-fusion-components"]
+      ,"@hb/taro-fusion-components/lib/apis/Native/types": ["./src/shims/hb-native-types"]
+      ,"@hb/wisdom-config-sdk": ["./src/shims/wisdom-config-sdk"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+  "compileOnSave": false,
+}

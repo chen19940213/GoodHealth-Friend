@@ -1,0 +1,59 @@
+diff --git a/node_modules/@tarojs/plugin-platform-alipay/dist/index.js b/node_modules/@tarojs/plugin-platform-alipay/dist/index.js
+index b8f0b16..1a1b202 100644
+--- a/node_modules/@tarojs/plugin-platform-alipay/dist/index.js
++++ b/node_modules/@tarojs/plugin-platform-alipay/dist/index.js
+@@ -120,7 +120,8 @@ const components = {
+         acceleration: 'false',
+         'disable-programmatic-animation': 'false',
+         'disable-touch': 'false',
+-        bindAnimationEnd: ''
++        bindAnimationEnd: '',
++        'adjust-height': 'none'
+     },
+     Image: {
+         'default-source': ''
+@@ -262,11 +263,11 @@ class Template extends template.RecursiveTemplate {
+         this.transferComponents = {};
+         this.modifyLoopBody = (child, nodeName) => {
+             if (nodeName === 'picker-view') {
+-                return `<picker-view-column class="{{item.cl}}" style="{{item.st}}">
+-        <view a:for="{{item.cn}}" a:key="sid">
+-          ${child}
+-        </view>
+-      </picker-view-column>`;
++                return `<block a:for="{{i.cn}}" a:key="sid">
++  <picker-view-column class="{{item.cl}}" style="{{item.st}}">
++      <template is="{{xs.a(0, item.nn)}}" data="{{i:item}}" a:for="{{item.cn}}" a:key="sid" />
++  </picker-view-column>
++</block>`;
+             }
+             return child;
+         };
+diff --git a/node_modules/@tarojs/plugin-platform-alipay/dist/runtime-utils.js b/node_modules/@tarojs/plugin-platform-alipay/dist/runtime-utils.js
+index 250b4f9..5d3d8c5 100644
+--- a/node_modules/@tarojs/plugin-platform-alipay/dist/runtime-utils.js
++++ b/node_modules/@tarojs/plugin-platform-alipay/dist/runtime-utils.js
+@@ -643,7 +643,8 @@ const components = {
+         acceleration: 'false',
+         'disable-programmatic-animation': 'false',
+         'disable-touch': 'false',
+-        bindAnimationEnd: ''
++        bindAnimationEnd: '',
++        'adjust-height': 'none'
+     },
+     Image: {
+         'default-source': ''
+diff --git a/node_modules/@tarojs/plugin-platform-alipay/dist/runtime.js b/node_modules/@tarojs/plugin-platform-alipay/dist/runtime.js
+index 3c015ef..6d369ed 100644
+--- a/node_modules/@tarojs/plugin-platform-alipay/dist/runtime.js
++++ b/node_modules/@tarojs/plugin-platform-alipay/dist/runtime.js
+@@ -643,7 +643,8 @@ const components = {
+         acceleration: 'false',
+         'disable-programmatic-animation': 'false',
+         'disable-touch': 'false',
+-        bindAnimationEnd: ''
++        bindAnimationEnd: '',
++        'adjust-height': 'none'
+     },
+     Image: {
+         'default-source': ''

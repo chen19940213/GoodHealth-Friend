@@ -1,0 +1,6 @@
+export default {
+  navigationBarTitleText: '日历趋势',
+  navigationBarBackgroundColor: '#F5F7FB',
+  navigationStyle: 'custom',
+};
+

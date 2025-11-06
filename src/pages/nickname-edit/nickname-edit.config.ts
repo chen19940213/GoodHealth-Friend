@@ -1,0 +1,5 @@
+export default {
+  navigationBarTitleText: '昵称编辑',
+  navigationStyle: 'custom',
+};
+

@@ -1,0 +1,175 @@
+.page-appraisal-view {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('https://m.hellobike.com/f46293eb_under_%20appraisal_bg.png');
+//   background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+
+
+  // 背景图片区域
+//   .appraisal-bg {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1;
+
+//     .bg-image {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+
+  // 主要内容区域
+  .appraisal-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75vh;
+    // justify-content: center;
+    // padding: 200px 40px 80px; // 100px * 2, 20px * 2, 40px * 2
+    box-sizing: border-box;
+  }
+
+  // 鉴定图标区域
+//   .appraisal-icon-section {
+//     margin-bottom: 100px; // 50px * 2
+
+//     .icon-container {
+//       position: relative;
+//       width: 246px; // 123px * 2
+//       height: 246px; // 123px * 2
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       .loading-icon {
+//         position: relative;
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         .loading-circle {
+//           width: 200px; // 100px * 2
+//           height: 200px; // 100px * 2
+//           border: 6px solid rgba(137, 203, 59, 20%);
+//           border-top: 6px solid #89CB3B;
+//           border-radius: 50%;
+//           animation: spin 2s linear infinite;
+//           position: relative;
+
+//           &::before {
+//             content: '';
+//             position: absolute;
+//             top: -6px;
+//             left: -6px;
+//             right: -6px;
+//             bottom: -6px;
+//             border: 2px solid rgba(137, 203, 59, 10%);
+//             border-radius: 50%;
+//             animation: spin 3s linear infinite reverse;
+//           }
+//         }
+
+//         .loading-dots {
+//           position: absolute;
+//           bottom: 30px; // 15px * 2
+//           left: 50%;
+//           transform: translateX(-50%);
+//           display: flex;
+//           gap: 12px; // 6px * 2
+
+//           .dot {
+//             width: 16px; // 8px * 2
+//             height: 16px; // 8px * 2
+//             background: #89CB3B;
+//             border-radius: 50%;
+//             animation: bounce 1.4s ease-in-out infinite both;
+//             box-shadow: 0 0 10px rgba(137, 203, 59, 50%);
+
+//             &:nth-child(1) {
+//               animation-delay: -0.32s;
+//             }
+
+//             &:nth-child(2) {
+//               animation-delay: -0.16s;
+//             }
+
+//             &:nth-child(3) {
+//               animation-delay: 0s;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+  // 文字说明区域
+  .appraisal-text-section {
+    text-align: center;
+
+    .main-title {
+      display: block;
+      font-size: 36px; // 18px * 2
+      font-weight: 500;
+      color: #000;
+      line-height: 1.4;
+      margin-bottom: 20px; // 10px * 2
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+    }
+
+    .sub-title {
+      display: block;
+      font-size: 28px; // 14px * 2
+      font-weight: 400;
+      color: #3F3F3F;
+      line-height: 1.4;
+      margin-bottom: 32px; // 16px * 2
+      opacity: 0.8;
+    }
+
+    .countdown-text {
+      font-size: 24px; // 12px * 2
+      font-weight: 500;
+      color: #89CB3B;
+      line-height: 1.4;
+      background: rgba(137, 203, 59, 10%);
+      padding: 8px 16px; // 4px 8px * 2
+      border-radius: 20px; // 10px * 2
+      display: inline-block;
+      border: 1px solid rgba(137, 203, 59, 30%);
+    }
+  }
+}
+
+// 动画定义
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}

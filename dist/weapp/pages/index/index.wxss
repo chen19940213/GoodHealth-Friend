@@ -1,0 +1,332 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/SemiCircleProgress/SemiCircleProgress.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.semi-circle-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.semi-circle-progress .progress-container {
+  position: relative;
+  width: 276rpx;
+  height: 276rpx;
+  margin-bottom: 48rpx;
+}
+.semi-circle-progress .progress-container .progress-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.semi-circle-progress .progress-container .progress-bg .progress-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.semi-circle-progress .progress-container .progress-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+.semi-circle-progress .progress-container .progress-content .current-weight {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #151521;
+  line-height: 1.2;
+  margin-bottom: 8rpx;
+}
+.semi-circle-progress .progress-container .progress-content .weight-label {
+  font-size: 20rpx;
+  color: #737373;
+}
+.semi-circle-progress .progress-container .start-point,
+.semi-circle-progress .progress-container .end-point {
+  position: absolute;
+  width: 24rpx;
+  height: 24rpx;
+  background: #FFFFFF;
+  border: 4rpx solid #FF5078;
+  border-radius: 50%;
+  z-index: 2;
+}
+.semi-circle-progress .progress-container .start-point {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.semi-circle-progress .progress-container .end-point {
+  top: 32rpx;
+  right: 0;
+}
+.semi-circle-progress .weight-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 590rpx;
+  padding: 0 60rpx;
+}
+.semi-circle-progress .weight-info .info-item {
+  text-align: center;
+}
+.semi-circle-progress .weight-info .info-item .info-value {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #151521;
+  margin-bottom: 8rpx;
+}
+.semi-circle-progress .weight-info .info-item .info-label {
+  font-size: 20rpx;
+  color: #737373;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/LineChart/LineChart.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.line-chart {
+  position: relative;
+  padding: 48rpx 0;
+}
+.line-chart .chart-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 614rpx;
+  height: 106rpx;
+}
+.line-chart .chart-container .chart-canvas {
+  display: block;
+  width: 100%;
+  height: 106rpx;
+  position: relative;
+}
+.line-chart .chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28rpx;
+  padding: 0 48rpx;
+}
+.line-chart .chart-labels .label-item {
+  flex: 1;
+  text-align: center;
+}
+.line-chart .chart-labels .label-item .label-text {
+  font-size: 20rpx;
+  color: #C6B2AB;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.line-chart .chart-labels .label-item .label-today {
+  color: #C6B2AB;
+  font-weight: 500;
+}
+.line-chart .chart-y-axis {
+  position: absolute;
+  top: 48rpx;
+  left: 64rpx;
+  right: 64rpx;
+  height: 12rpx;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.line-chart .chart-y-axis .y-axis-tick {
+  width: 2rpx;
+  height: 10rpx;
+  background: #C6B2AB;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-index-view {
+  background: #F5F7FB;
+  min-height: 100vh;
+}
+.page-index-view .top-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 892rpx;
+  background: #FFDDE5;
+  z-index: 0;
+}
+.page-index-view > div {
+  position: relative;
+  z-index: 1;
+}
+.page-index-view .page-header {
+  position: relative;
+  z-index: 1;
+  padding: 118rpx 36rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-index-view .page-header .header-title .title-text {
+  font-size: 40rpx;
+  font-weight: 400;
+  color: #242729;
+  margin-right: 20rpx;
+}
+.page-index-view .page-header .header-title .subtitle-text {
+  font-size: 28rpx;
+  color: #000000;
+}
+.page-index-view .user-card {
+  position: relative;
+  z-index: 1;
+  margin: 24rpx;
+  padding: 32rpx;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: flex-start;
+  gap: 24rpx;
+}
+.page-index-view .user-card .user-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  background: #FFD5DF;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.page-index-view .user-card .user-info {
+  flex: 1;
+}
+.page-index-view .user-card .user-info .user-name {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #242729;
+  margin-bottom: 8rpx;
+}
+.page-index-view .user-card .user-info .user-reason {
+  font-size: 22rpx;
+  color: #151521;
+  margin-bottom: 8rpx;
+}
+.page-index-view .user-card .user-info .user-motivation {
+  font-size: 22rpx;
+  color: #151521;
+}
+.page-index-view .progress-card {
+  position: relative;
+  z-index: 1;
+  margin: 0 24rpx;
+  padding: 44rpx 32rpx;
+  background: #FEFEFE;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.page-index-view .progress-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48rpx;
+}
+.page-index-view .progress-card .card-header .card-title {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #000000;
+}
+.page-index-view .progress-card .card-header .card-stats {
+  display: flex;
+  align-items: baseline;
+  gap: 8rpx;
+}
+.page-index-view .progress-card .card-header .card-stats .stats-text {
+  font-size: 24rpx;
+  color: #737373;
+}
+.page-index-view .progress-card .card-header .card-stats .stats-number {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #F14169;
+  font-family: DIN, sans-serif;
+}
+.page-index-view .progress-card .card-header .card-stats .stats-unit {
+  font-size: 24rpx;
+  color: #737373;
+}
+.page-index-view .progress-card .card-header .trend-link {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+.page-index-view .progress-card .card-header .trend-link .trend-text {
+  font-size: 24rpx;
+  color: #000000;
+}
+.page-index-view .progress-card .checkin-cards {
+  display: flex;
+  gap: 40rpx;
+  margin-bottom: 48rpx;
+  overflow-x: auto;
+  padding-bottom: 16rpx;
+}
+.page-index-view .progress-card .checkin-cards .checkin-card {
+  width: 90rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 16rpx;
+  background: linear-gradient(180deg, #FFFAEB 0%, #FFEFC3 100%);
+  border: 2rpx solid rgba(255, 188, 13, 0.3);
+  border-radius: 46rpx;
+  flex-shrink: 0;
+}
+.page-index-view .progress-card .checkin-cards .checkin-card.today {
+  background: #FF5078;
+  border: 3rpx solid #000000;
+  box-shadow: inset 0rpx -6rpx 0rpx 0rpx rgba(0, 0, 0, 0.25);
+}
+.page-index-view .progress-card .checkin-cards .checkin-card.today .card-weight {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.page-index-view .progress-card .checkin-cards .checkin-card .card-emoji {
+  width: 86rpx;
+  height: 92rpx;
+  margin-bottom: 8rpx;
+  font-size: 80rpx;
+  line-height: 92rpx;
+  text-align: center;
+}
+.page-index-view .progress-card .checkin-cards .checkin-card .card-weight {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #000000;
+  font-family: DIN, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.page-index-view .progress-card .record-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF4E77;
+  border: 3rpx solid #000000;
+  border-radius: 44rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 48rpx;
+  box-shadow: inset 0rpx -10rpx 0rpx 0rpx rgba(0, 0, 0, 0.25);
+}
+.page-index-view .progress-card .record-button:active {
+  opacity: 0.9;
+}
+.page-index-view .progress-card .chart-section {
+  margin-top: 48rpx;
+}
+.page-index-view .progress-section {
+  position: relative;
+  z-index: 1;
+  margin: 0 24rpx 40rpx;
+  padding: 40rpx;
+  background: #FFF1E4;
+  border-radius: 40rpx;
+  margin-top: 40rpx;
+}

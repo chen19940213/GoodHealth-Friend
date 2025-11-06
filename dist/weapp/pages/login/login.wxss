@@ -1,0 +1,151 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/login/login.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-login-view {
+  background: #FFF;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.page-login-view .top-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 528rpx;
+  background: linear-gradient(180deg, #F3FFE5 56.11%, rgba(243, 255, 229, 0) 100%);
+  z-index: 0;
+}
+.page-login-view .top-gradient-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350rpx;
+  height: 528rpx;
+  background: linear-gradient(270deg, #E9FBFE 0%, rgba(233, 251, 254, 0) 100%);
+}
+.page-login-view .back-btn {
+  position: absolute;
+  top: 107rpx;
+  left: 24rpx;
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.page-login-view .back-btn .back-icon {
+  width: 20rpx;
+  height: 36rpx;
+  border-left: 2rpx solid #242729;
+  border-bottom: 2rpx solid #242729;
+  transform: rotate(45deg);
+}
+.page-login-view .logo-section {
+  position: relative;
+  z-index: 1;
+  padding-top: 256rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-login-view .logo-section .logo-box {
+  width: 156rpx;
+  height: 156rpx;
+  background: #020301;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+.page-login-view .logo-section .logo-box .logo-text {
+  font-family: "MF YuanHei(Noncommercial)", "PingFang SC", sans-serif;
+  font-weight: 400;
+  font-size: 56.7rpx;
+  color: #FFF;
+  line-height: 0.95;
+  position: relative;
+}
+.page-login-view .logo-section .logo-box .logo-text::after {
+  content: "";
+  position: absolute;
+  right: -18rpx;
+  top: 33.7rpx;
+  width: 17.8rpx;
+  height: 14.2rpx;
+  background: #BCE100;
+  border-radius: 2rpx;
+}
+.page-login-view .logo-section .slogan {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #242729;
+  line-height: 1.4;
+}
+.page-login-view .login-actions {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 56rpx 140rpx;
+}
+.page-login-view .login-actions .auth-login-btn {
+  width: 100%;
+  height: 104rpx;
+  background: #1B1B1B;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 1.4;
+  border: none;
+  margin-bottom: 28rpx;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+.page-login-view .login-actions .auth-login-btn:active {
+  opacity: 0.8;
+}
+.page-login-view .login-actions .wx-auth-btn {
+  width: 100%;
+  height: 104rpx;
+  background: #07C160;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 1.4;
+  border: none;
+  margin-bottom: 28rpx;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+.page-login-view .login-actions .wx-auth-btn:active {
+  opacity: 0.8;
+}
+.page-login-view .login-actions .phone-login-text {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #5A6066;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+}
+.page-login-view .login-actions .phone-login-text:active {
+  opacity: 0.6;
+}

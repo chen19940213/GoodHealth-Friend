@@ -1,0 +1,208 @@
+.page-my-view {
+  background: #FFFFFF;
+  min-height: 100vh;
+  position: relative;
+  
+  // 顶部渐变背景
+  .top-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 292px;
+    background: linear-gradient(180deg, #FFDDE5 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 0;
+  }
+
+  // 主内容区域
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  // 用户信息区域
+  .user-section {
+    position: relative;
+    z-index: 1;
+    padding: 160px 28px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: transparent;
+
+    .user-info-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+
+      .user-avatar {
+        width: 158px;
+        height: 158px;
+        border-radius: 50%;
+        background: #FFD5DF;
+        flex-shrink: 0;
+        border: none;
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 16px;
+
+        .user-nickname {
+          font-size: 36px;
+          font-weight: 500;
+          color: #242729;
+          line-height: 1.4;
+        }
+
+        .login-text-btn {
+          font-size: 36px;
+          font-weight: 500;
+          color: #242729;
+          background: transparent;
+          border: none;
+          padding: 0;
+          text-align: left;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .settings-icon-wrapper {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .settings-icon {
+        width: 22px;
+        height: 22px;
+        background: #FF5078;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // 减肥原因
+  .reason-section {
+    position: relative;
+    z-index: 1;
+    padding: 28px 28px 0;
+    margin-top: 40px;
+
+    .reason-text {
+      font-size: 24px;
+      color: #242729;
+      line-height: 1.4;
+    }
+  }
+
+  // 标签区域
+  .tags-section {
+    position: relative;
+    z-index: 1;
+    padding: 32px 28px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .tag-item {
+      height: 66px;
+      padding: 0 24px;
+      background: #F5F5F5;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      .tag-icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+
+      .tag-text {
+        font-size: 24px;
+        color: #242729;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  // 反馈卡片
+  .feedback-card {
+    position: relative;
+    z-index: 1;
+    margin: 28px;
+    padding: 32px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 24px;
+
+    .feedback-avatar {
+      width: 154px;
+      height: 158px;
+      background: #FF4D76;
+      border-radius: 24px;
+      flex-shrink: 0;
+    }
+
+    .feedback-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .feedback-title {
+        font-size: 28px;
+        color: #242729;
+        line-height: 1.4;
+      }
+
+      .feedback-subtitle {
+        font-size: 28px;
+        color: #242729;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  // 操作按钮
+  .action-buttons {
+    position: relative;
+    z-index: 1;
+    padding: 28px;
+    display: flex;
+    gap: 24px;
+
+    .action-btn {
+      flex: 1;
+      height: 74px;
+      background: #FF4E77;
+      border: 3px solid #000000;
+      border-radius: 62px;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 600;
+      box-shadow: inset 0px -8px 0px 0px rgba(0, 0, 0, 0.25);
+
+      &.primary {
+        background: #FF4E77;
+      }
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+}

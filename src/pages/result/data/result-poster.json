@@ -1,0 +1,379 @@
+{
+    "code": 0,
+    "msg": "ok",
+    "data": {
+        "width": "750px",
+        "height": "1334px",
+        "background": "#F5F5F5",
+        "views": [
+            {
+                "id": "backgroundImage",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/Lw0SD8W5_taichi_image.png",
+                "css": {
+                    "width": "750px",
+                    "height": "1334px",
+                    "top": "0px",
+                    "left": "0px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "contentCard",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/Lw0SD8W5_taichi_image.png",
+                "css": {
+                    "width": "670px",
+                    "height": "1272px",
+                    "top": "40px",
+                    "left": "40px",
+                    "mode": "aspectFill",
+                    "borderRadius": "10px"
+                }
+            },
+            {
+                "id": "titleLine1",
+                "type": "rect",
+                "css": {
+                    "width": "47px",
+                    "height": "2px",
+                    "top": "120px",
+                    "left": "300px",
+                    "backgroundColor": "#FFFFFF"
+                }
+            },
+            {
+                "id": "titleText",
+                "type": "text",
+                "text": "在线鉴定证明",
+                "css": {
+                    "width": "200px",
+                    "top": "100px",
+                    "left": "275px",
+                    "fontSize": "32px",
+                    "color": "#595959",
+                    "textAlign": "center",
+                    "fontWeight": "400"
+                }
+            },
+            {
+                "id": "titleLine2",
+                "type": "rect",
+                "css": {
+                    "width": "47px",
+                    "height": "2px",
+                    "top": "120px",
+                    "left": "403px",
+                    "backgroundColor": "#FFFFFF"
+                }
+            },
+            {
+                "id": "resultStatus",
+                "type": "text",
+                "text": "符合正品特征",
+                "css": {
+                    "width": "400px",
+                    "top": "180px",
+                    "left": "175px",
+                    "fontSize": "60px",
+                    "color": "#020202",
+                    "textAlign": "center",
+                    "fontWeight": "700",
+                    "lineHeight": "1.0"
+                }
+            },
+            {
+                "id": "resultTip",
+                "type": "text",
+                "text": "鉴别结果根据用户信息得出",
+                "css": {
+                    "width": "400px",
+                    "top": "240px",
+                    "left": "175px",
+                    "fontSize": "28px",
+                    "color": "#7B7B7B",
+                    "textAlign": "center"
+                }
+            },
+            {
+                "id": "productImage",
+                "type": "image",
+                "url": "https://img1.baidu.com/it/u=293340820,2978436854&fm=253&app=138&f=JPEG?w=683&h=856",
+                "css": {
+                    "width": "278px",
+                    "height": "342px",
+                    "top": "300px",
+                    "left": "236px",
+                    "mode": "aspectFill",
+                    "borderRadius": "10px"
+                }
+            },
+            {
+                "id": "verifyBadge",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/Z_vTBn4T_taichi_image.png",
+                "css": {
+                    "width": "132px",
+                    "height": "132px",
+                    "top": "510px",
+                    "left": "450px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "appraiserAvatar",
+                "type": "image",
+                "url": "https://img1.baidu.com/it/u=293340820,2978436854&fm=253&app=138&f=JPEG?w=683&h=856",
+                "css": {
+                    "width": "60px",
+                    "height": "60px",
+                    "top": "700px",
+                    "left": "100px",
+                    "mode": "aspectFill",
+                    "borderRadius": "30px"
+                }
+            },
+            {
+                "id": "appraiserBadge",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/21jUo7pP_taichi_image.png",
+                "css": {
+                    "width": "120px",
+                    "height": "26px",
+                    "top": "710px",
+                    "left": "180px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "appraiserName",
+                "type": "text",
+                "text": "椰椰",
+                "css": {
+                    "width": "100px",
+                    "top": "750px",
+                    "left": "180px",
+                    "fontSize": "26px",
+                    "color": "#595959",
+                    "fontWeight": "500"
+                }
+            },
+            {
+                "id": "description",
+                "type": "text",
+                "text": "小卡细节工艺符合正品特征，鉴别通过，纹路比例切角没问题",
+                "css": {
+                    "width": "600px",
+                    "top": "800px",
+                    "left": "75px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "textAlign": "center",
+                    "lineHeight": "1.5"
+                }
+            },
+            {
+                "id": "analysisTitle",
+                "type": "text",
+                "text": "鉴别部位分析",
+                "css": {
+                    "width": "200px",
+                    "top": "880px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#000000",
+                    "fontWeight": "500"
+                }
+            },
+            {
+                "id": "analysisCount",
+                "type": "text",
+                "text": "5项全通过",
+                "css": {
+                    "width": "200px",
+                    "top": "880px",
+                    "left": "450px",
+                    "fontSize": "24px",
+                    "color": "#000000",
+                    "fontWeight": "500",
+                    "textAlign": "right"
+                }
+            },
+            {
+                "id": "checkItem1",
+                "type": "text",
+                "text": "小卡正面",
+                "css": {
+                    "width": "200px",
+                    "top": "920px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "fontWeight": "300"
+                }
+            },
+            {
+                "id": "checkIcon1",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png",
+                "css": {
+                    "width": "20px",
+                    "height": "20px",
+                    "top": "920px",
+                    "left": "600px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "checkItem2",
+                "type": "text",
+                "text": "小卡背面",
+                "css": {
+                    "width": "200px",
+                    "top": "950px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "fontWeight": "300"
+                }
+            },
+            {
+                "id": "checkIcon2",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png",
+                "css": {
+                    "width": "20px",
+                    "height": "20px",
+                    "top": "950px",
+                    "left": "600px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "checkItem3",
+                "type": "text",
+                "text": "小卡正面纹路对光",
+                "css": {
+                    "width": "200px",
+                    "top": "980px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "fontWeight": "300"
+                }
+            },
+            {
+                "id": "checkIcon3",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png",
+                "css": {
+                    "width": "20px",
+                    "height": "20px",
+                    "top": "980px",
+                    "left": "600px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "checkItem4",
+                "type": "text",
+                "text": "小卡背面文字logo",
+                "css": {
+                    "width": "200px",
+                    "top": "1010px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "fontWeight": "300"
+                }
+            },
+            {
+                "id": "checkIcon4",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png",
+                "css": {
+                    "width": "20px",
+                    "height": "20px",
+                    "top": "1010px",
+                    "left": "600px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "checkItem5",
+                "type": "text",
+                "text": "小卡像素点",
+                "css": {
+                    "width": "200px",
+                    "top": "1040px",
+                    "left": "100px",
+                    "fontSize": "24px",
+                    "color": "#595959",
+                    "fontWeight": "300"
+                }
+            },
+            {
+                "id": "checkIcon5",
+                "type": "image",
+                "url": "https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png",
+                "css": {
+                    "width": "20px",
+                    "height": "20px",
+                    "top": "1040px",
+                    "left": "600px",
+                    "mode": "aspectFill"
+                }
+            },
+            {
+                "id": "idLabel",
+                "type": "text",
+                "text": "鉴别ID：",
+                "css": {
+                    "width": "100px",
+                    "top": "1080px",
+                    "left": "100px",
+                    "fontSize": "22px",
+                    "color": "#595959"
+                }
+            },
+            {
+                "id": "idValue",
+                "type": "text",
+                "text": "73r9273894377789",
+                "css": {
+                    "width": "200px",
+                    "top": "1080px",
+                    "left": "200px",
+                    "fontSize": "20px",
+                    "color": "#595959",
+                    "fontWeight": "500"
+                }
+            },
+            {
+                "id": "timeLabel",
+                "type": "text",
+                "text": "鉴别时间：",
+                "css": {
+                    "width": "100px",
+                    "top": "1110px",
+                    "left": "100px",
+                    "fontSize": "22px",
+                    "color": "#595959"
+                }
+            },
+            {
+                "id": "timeValue",
+                "type": "text",
+                "text": "2025-10-05 13:30",
+                "css": {
+                    "width": "200px",
+                    "top": "1110px",
+                    "left": "200px",
+                    "fontSize": "20px",
+                    "color": "#595959",
+                    "fontWeight": "500"
+                }
+            }
+        ]
+    }
+}

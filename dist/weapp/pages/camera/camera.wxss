@@ -1,0 +1,428 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/camera/camera.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-camera-view {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+}
+.page-camera-view .camera-preview {
+  position: absolute;
+  top: 104rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.page-camera-view .camera-preview .camera-component {
+  width: 100%;
+  height: 900rpx;
+}
+.page-camera-view .camera-preview .shutter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 9999;
+  pointer-events: none;
+  animation: shutter-flash 0.3s ease-out;
+}
+@keyframes shutter-flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.page-camera-view .camera-preview .flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  pointer-events: none;
+  animation: flash-effect 0.3s ease-out;
+}
+@keyframes flash-effect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.page-camera-view .camera-preview .photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.page-camera-view .camera-preview .photo-overlay .overlay-image {
+  width: 100%;
+  height: 900rpx;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+.page-camera-view .camera-preview .photo-overlay .overlay-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 32rpx;
+  text-align: center;
+}
+.page-camera-view .camera-preview .photo-overlay .overlay-mask .overlay-text {
+  color: #FFF;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.page-camera-view .camera-preview .capture-frame {
+  width: 100vw;
+  height: 900rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners {
+  width: 646rpx;
+  height: 796rpx;
+  position: relative;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners .corner {
+  position: absolute;
+  width: 50rpx;
+  height: 49rpx;
+  border: 8rpx solid #FFF;
+  opacity: 0.5;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners .corner.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners .corner.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners .corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.page-camera-view .camera-preview .capture-frame .frame-corners .corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+.page-camera-view .top-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 264rpx;
+  background: rgb(20, 21, 26);
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  padding: 112rpx 32rpx 32rpx;
+}
+.page-camera-view .top-controls .back-button {
+  width: 64rpx;
+  height: 64rpx;
+  background: rgba(0, 0, 0, 0.34);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(14rpx);
+}
+.page-camera-view .top-controls .back-button .back-icon {
+  width: 40rpx;
+  height: 40rpx;
+  background: #FFF;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 18%27%3E%3Cpath d=%27M8 0L0 9l8 9%27 stroke=%27currentColor%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E") no-repeat center;
+          mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 18%27%3E%3Cpath d=%27M8 0L0 9l8 9%27 stroke=%27currentColor%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.page-camera-view .top-controls .page-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 1.4;
+}
+.page-camera-view .top-controls .setting-icon {
+  width: 146rpx;
+  height: 56rpx;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-camera-view .top-controls .setting-icon .setting-icon-inner {
+  width: 32rpx;
+  height: 12rpx;
+  position: relative;
+}
+.page-camera-view .top-controls .setting-icon .setting-icon-inner::before, .page-camera-view .top-controls .setting-icon .setting-icon-inner::after {
+  content: "";
+  position: absolute;
+  width: 7.44rpx;
+  height: 7.44rpx;
+  border-radius: 50%;
+  background: #12151A;
+}
+.page-camera-view .top-controls .setting-icon .setting-icon-inner::before {
+  left: 0;
+  top: 2.78rpx;
+}
+.page-camera-view .top-controls .setting-icon .setting-icon-inner::after {
+  right: 0;
+  top: 2.78rpx;
+}
+.page-camera-view .top-controls .setting-icon .setting-icon-inner {
+  background: radial-gradient(circle at center, #12151A 0%, #12151A 6rpx, transparent 6rpx);
+}
+.page-camera-view .progress-section {
+  position: absolute;
+  top: 16rpx;
+  left: 30rpx;
+  right: 30rpx;
+  z-index: 10;
+}
+.page-camera-view .progress-section .step-indicator {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 24rpx;
+}
+.page-camera-view .progress-section .progress-bar {
+  display: flex;
+  gap: 4rpx;
+}
+.page-camera-view .progress-section .progress-bar .progress-item {
+  flex: 1;
+  height: 14rpx;
+  background: #FFF;
+  border-radius: 7rpx;
+  opacity: 0.3;
+}
+.page-camera-view .progress-section .progress-bar .progress-item.active {
+  background: #DEFC52;
+  opacity: 1;
+}
+.page-camera-view .progress-section .progress-bar .progress-item:first-child {
+  border-radius: 14rpx 0 0 14rpx;
+}
+.page-camera-view .progress-section .progress-bar .progress-item:last-child {
+  border-radius: 0 14rpx 14rpx 0;
+}
+.page-camera-view .instruction-section {
+  position: absolute;
+  top: 992rpx;
+  left: 0;
+  height: 118rpx;
+  z-index: 10;
+  padding: 56rpx 36rpx 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 32rpx;
+}
+.page-camera-view .instruction-section .step-image {
+  width: 118rpx;
+  height: 118rpx;
+  background: #E5E5E5;
+  border-radius: 10rpx;
+  position: relative;
+  flex-shrink: 0;
+}
+.page-camera-view .instruction-section .step-image .step-image-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page-camera-view .instruction-section .step-image .required-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44rpx;
+  height: 26rpx;
+  background: #FF8C00;
+  border-radius: 10rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16rpx;
+  font-weight: 600;
+  color: #FFF;
+  line-height: 1.625;
+}
+.page-camera-view .instruction-section .step-content {
+  flex: 1;
+}
+.page-camera-view .instruction-section .step-content .step-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #DEFC52;
+  line-height: 1.07;
+  margin-bottom: 16rpx;
+}
+.page-camera-view .instruction-section .step-content .step-description {
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 1.36;
+  opacity: 0.6;
+}
+.page-camera-view .bottom-controls {
+  position: absolute;
+  top: 1156rpx;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 60rpx 80rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-camera-view .bottom-controls .control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button .torch-icon {
+  width: 32rpx;
+  height: 42rpx;
+  transition: all 0.3s ease;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button .album-icon {
+  width: 40rpx;
+  height: 38rpx;
+  transition: all 0.3s ease;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button .control-text {
+  font-size: 18rpx;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 1.11;
+  transition: all 0.3s ease;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button.torch-active .torch-icon {
+  background: #FFD700;
+  box-shadow: 0 0 20rpx rgba(255, 215, 0, 0.6);
+}
+.page-camera-view .bottom-controls .control-buttons .control-button.torch-active .control-text {
+  color: #FFD700;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button.photo-control {
+  width: 116rpx;
+  height: 116rpx;
+  border: 2rpx solid #FFF;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button.photo-control .control-text {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #FFF;
+  line-height: 0.83;
+  text-align: center;
+}
+.page-camera-view .bottom-controls .control-buttons .control-button.photo-control:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+.page-camera-view .bottom-controls .control-buttons .capture-button {
+  width: 144rpx;
+  height: 144rpx;
+  border: 8rpx solid #FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-camera-view .bottom-controls .control-buttons .capture-button .capture-icon {
+  width: 64rpx;
+  height: 64rpx;
+  background: #FFF;
+  border-radius: 50%;
+}
+.page-camera-view .bottom-controls .retake-button {
+  position: absolute;
+  right: 32rpx;
+  bottom: 100rpx;
+  width: 92rpx;
+  height: 92rpx;
+  border: 2rpx solid #DEFC52;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-camera-view .bottom-controls .retake-button .retake-icon {
+  width: 50rpx;
+  height: 50rpx;
+  background: #DEFC52;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 25 25%27%3E%3Cpath d=%27M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm0 22.5c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z%27 fill=%27currentColor%27/%3E%3C/svg%3E") no-repeat center;
+          mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 25 25%27%3E%3Cpath d=%27M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm0 22.5c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z%27 fill=%27currentColor%27/%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}

@@ -1,0 +1,112 @@
+{
+  "name": "AppStarCardWXSS",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Fusion App Template",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "Sass",
+    "framework": "React"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "deploy": {
+    "node": "18"
+  },
+  "scripts": {
+    "fat": "cross-env CODE_ENV=fat node ./scripts/build.js --watch",
+    "uat": "cross-env CODE_ENV=uat node ./scripts/build.js --watch",
+    "pro": "cross-env CODE_ENV=pro node ./scripts/build.js --watch",
+    "build": "node ./scripts/build.js",
+    "eslint": "eslint --quiet --ext .ts,.tsx, src",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "postinstall": "patch-package"
+  },
+  "author": "zhangyongyong",
+  "license": "MIT",
+  "dependencies": {
+    "@antv/f2": "^5.13.0",
+    "@babel/runtime": "^7.24.4",
+    
+    "@tarojs/components": "4.0.9",
+    "@tarojs/helper": "4.0.9",
+    "@tarojs/plugin-framework-react": "4.0.9",
+    "@tarojs/plugin-inject": "4.0.9",
+    "@tarojs/plugin-platform-alipay": "4.0.9",
+    "@tarojs/plugin-platform-h5": "4.0.9",
+    "@tarojs/plugin-platform-harmony-hybrid": "4.0.9",
+    "@tarojs/plugin-platform-jd": "4.0.9",
+    "@tarojs/plugin-platform-qq": "4.0.9",
+    "@tarojs/plugin-platform-swan": "4.0.9",
+    "@tarojs/plugin-platform-tt": "4.0.9",
+    "@tarojs/plugin-platform-weapp": "4.0.9",
+    "@tarojs/react": "4.0.9",
+    "@tarojs/runtime": "4.0.9",
+    "@tarojs/shared": "4.0.9",
+    "@tarojs/taro": "4.0.9",
+    "classnames": "2.3.1",
+    "dayjs": "1.10.4",
+    "echarts": "^5.4.3",
+    "echarts-for-weixin": "^1.0.2",
+    "mobx": "5.15.7",
+    "mobx-react": "^6.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "overrides": {
+    "@swc/wasm": "0.0.0-0",
+    "echarts": "^5.4.3"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/preset-react": "^7.24.1",
+    
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "@tarojs/cli": "4.0.9",
+    "@tarojs/shared": "4.0.9",
+    "@tarojs/taro-loader": "4.0.9",
+    "@tarojs/webpack5-runner": "4.0.9",
+    "@types/node": "^18",
+    "@types/react": "^18.0.0",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
+    "babel-plugin-import": "^1.13.8",
+    "babel-preset-taro": "4.0.9",
+    "browserslist": "^4.21.8",
+    "dotenv": "^16.5.0",
+    "eslint": "^8.57.1",
+    "eslint-config-taro": "4.0.9",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-taro": "^3.3.20",
+    "patch-package": "^8.0.0",
+    "postcss": "^8.4.38",
+    "postcss-scss": "^4.0.9",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.75.0",
+    "stylelint": "^15.11.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.11.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.4.5",
+    "webpack": "5.91.0"
+  },
+  "appNameMapping": {
+    "weapp": "AppStarCardWXSS",
+    "alipay": "AppPetAliSS",
+    "tt": "AppPetTTSS",
+    "hello": "AppPetHLSS",
+    "pet": "AppPetStary",
+    "petbos": "AppPetBOSS",
+    "rent": "AppPetRTSS"
+  }
+}

@@ -1,0 +1,45 @@
+
+.com-stats-card {
+  height: 140px;
+  margin: 12px;
+  background: linear-gradient(167deg, #fde996 0%, #ffb300 100%);
+  box-shadow: 0 10px 20px 0 rgba(255, 197, 47, 25%);
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+
+  .data {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: #333;
+
+    .unit {
+      top: 0;
+      font-size: 24px;
+      font-weight: 300;
+      margin-left: 4px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .desc {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 120px;
+  }
+}

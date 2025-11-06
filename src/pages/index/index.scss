@@ -1,0 +1,231 @@
+.page-index-view {
+  background: #F5F7FB;
+  min-height: 100vh;
+
+  // 顶部渐变背景
+  .top-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 892px;
+    background: #FFDDE5;
+    z-index: 0;
+  }
+
+  // 主内容区域
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  // 页面标题区域
+  .page-header {
+    position: relative;
+    z-index: 1;
+    padding: 118px 36px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-title {
+      .title-text {
+        font-size: 40px;
+        font-weight: 400;
+        color: #242729;
+        margin-right: 20px;
+      }
+
+      .subtitle-text {
+        font-size: 28px;
+        color: #000000;
+      }
+    }
+  }
+
+  // 用户信息卡片
+  .user-card {
+    position: relative;
+    z-index: 1;
+    margin: 24px;
+    padding: 32px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    .user-avatar {
+      width: 72px;
+      height: 72px;
+      background: #FFD5DF;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .user-info {
+      flex: 1;
+
+      .user-name {
+        font-size: 26px;
+        font-weight: 500;
+        color: #242729;
+        margin-bottom: 8px;
+      }
+
+      .user-reason {
+        font-size: 22px;
+        color: #151521;
+        margin-bottom: 8px;
+      }
+
+      .user-motivation {
+        font-size: 22px;
+        color: #151521;
+      }
+    }
+  }
+
+  // 进度卡片区域
+  .progress-card {
+    position: relative;
+    z-index: 1;
+    margin: 0 24px;
+    padding: 44px 32px;
+    background: #FEFEFE;
+    border-radius: 40px 40px 0 0;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+
+      .card-title {
+        font-size: 32px;
+        font-weight: 400;
+        color: #000000;
+      }
+
+      .card-stats {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+
+        .stats-text {
+          font-size: 24px;
+          color: #737373;
+        }
+
+        .stats-number {
+          font-size: 36px;
+          font-weight: 500;
+          color: #F14169;
+          font-family: DIN, sans-serif;
+        }
+
+        .stats-unit {
+          font-size: 24px;
+          color: #737373;
+        }
+      }
+
+      .trend-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .trend-text {
+          font-size: 24px;
+          color: #000000;
+        }
+      }
+    }
+
+    // 打卡卡片列表
+    .checkin-cards {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 48px;
+      overflow-x: auto;
+      padding-bottom: 16px;
+
+      .checkin-card {
+        width: 90px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 16px;
+        background: linear-gradient(180deg, #FFFAEB 0%, #FFEFC3 100%);
+        border: 2px solid rgba(255, 188, 13, 0.3);
+        border-radius: 46px;
+        flex-shrink: 0;
+
+        &.today {
+          background: #FF5078;
+          border: 3px solid #000000;
+          box-shadow: inset 0px -6px 0px 0px rgba(0, 0, 0, 0.25);
+
+          .card-weight {
+            color: #FFFFFF;
+            font-weight: 700;
+          }
+        }
+
+        .card-emoji {
+          width: 86px;
+          height: 92px;
+          margin-bottom: 8px;
+          font-size: 80px;
+          line-height: 92px;
+          text-align: center;
+        }
+
+        .card-weight {
+          font-size: 20px;
+          font-weight: 500;
+          color: #000000;
+          font-family: DIN, sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+        }
+      }
+    }
+
+    // 记录体重按钮
+    .record-button {
+      width: 100%;
+      height: 88px;
+      background: #FF4E77;
+      border: 3px solid #000000;
+      border-radius: 44px;
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 48px;
+      box-shadow: inset 0px -10px 0px 0px rgba(0, 0, 0, 0.25);
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+
+    // 折线图区域
+    .chart-section {
+      margin-top: 48px;
+    }
+  }
+
+  // 半圆形进度条区域
+  .progress-section {
+    position: relative;
+    z-index: 1;
+    margin: 0 24px 40px;
+    padding: 40px;
+    background: #FFF1E4;
+    border-radius: 40px;
+    margin-top: 40px;
+  }
+}

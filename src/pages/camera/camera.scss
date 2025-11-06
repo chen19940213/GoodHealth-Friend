@@ -1,0 +1,497 @@
+.page-camera-view {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+
+  // 相机预览区域
+  .camera-preview {
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    // 实时相机组件
+    .camera-component {
+      width: 100%;
+      height: 900px;
+    }
+
+    // 快门效果
+    .shutter-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      z-index: 9999;
+      pointer-events: none;
+      animation: shutter-flash 0.3s ease-out;
+    }
+
+    @keyframes shutter-flash {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    // 手电筒闪烁效果
+    .flash-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 80%);
+      z-index: 9999;
+      pointer-events: none;
+      animation: flash-effect 0.3s ease-out;
+    }
+
+    @keyframes flash-effect {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    // 已拍摄照片覆盖层
+    .photo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 30%);
+      cursor: pointer;
+      pointer-events: auto;
+
+      .overlay-image {
+        width: 100%;
+        height: 900px;
+        object-fit: cover;
+        pointer-events: none; // 确保图片本身不阻止点击事件
+      }
+
+      .overlay-mask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 60%);
+        padding: 32px; // 16px * 2
+        text-align: center;
+
+        .overlay-text {
+          color: #FFF;
+          font-size: 32px; // 16px * 2
+          font-weight: 500;
+        }
+      }
+    }
+
+    // 拍摄框
+    .capture-frame {
+      width: 100vw;
+      height: 900px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      .frame-corners {
+        width: 646px; // 321px * 2
+        height: 796px; // 398px * 2
+        position: relative;
+
+        .corner {
+          position: absolute;
+          width: 50px; // 25px * 2
+          height: 49px; // 24.5px * 2
+          border: 8px solid #FFF; // 4px * 2
+          opacity: 0.5;
+
+          &.top-left {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+          }
+
+          &.top-right {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+          }
+
+          &.bottom-left {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+          }
+
+          &.bottom-right {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+
+  // 顶部控制区域
+  .top-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 264px; // 132px * 2
+    background: rgba(20, 21, 26, 100%);
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    padding: 112px 32px 32px; // 56px * 2, 16px * 2
+
+    .back-button {
+      width: 64px; // 32px * 2
+      height: 64px; // 32px * 2
+      background: rgba(0, 0, 0, 34%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(14px); // 7.11px * 2
+
+      .back-icon {
+        width: 40px; // 20px * 2
+        height: 40px; // 20px * 2
+        background: #FFF;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 18'%3E%3Cpath d='M8 0L0 9l8 9' stroke='currentColor' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat center;
+        mask-size: contain;
+      }
+    }
+
+    .page-title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px; // 16px * 2
+      font-weight: 500;
+      color: #FFF;
+      line-height: 1.4;
+    }
+
+    .setting-icon {
+      width: 146px; // 73px * 2
+      height: 56px; // 28px * 2
+      background: rgba(255, 255, 255, 78%);
+      border-radius: 28px; // 14px * 2
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .setting-icon-inner {
+        width: 32px; // 16px * 2
+        height: 12px; // 6px * 2
+        position: relative;
+        
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 7.44px; // 3.72px * 2
+          height: 7.44px; // 3.72px * 2
+          border-radius: 50%;
+          background: #12151A;
+        }
+
+        &::before {
+          left: 0;
+          top: 2.78px; // 1.39px * 2
+        }
+
+        &::after {
+          right: 0;
+          top: 2.78px; // 1.39px * 2
+        }
+
+        // 中间圆点
+        background: radial-gradient(circle at center, #12151A 0%, #12151A 6px, transparent 6px); // 3px * 2
+      }
+    }
+  }
+
+  // 进度条区域
+  .progress-section {
+    position: absolute;
+    top: 16px; // 156px * 2
+    left: 30px; // 15px * 2
+    right: 30px; // 15px * 2
+    z-index: 10;
+
+    .step-indicator {
+      font-size: 24px; // 12px * 2
+      font-weight: 500;
+      color: #FFF;
+      text-align: center;
+      margin-bottom: 24px; // 12px * 2
+    }
+
+    .progress-bar {
+      display: flex;
+      gap: 4px; // 2px * 2
+
+      .progress-item {
+        flex: 1;
+        height: 14px; // 7px * 2
+        background: #FFF;
+        border-radius: 7px; // 3.5px * 2
+        opacity: 0.3;
+
+        &.active {
+          background: #DEFC52;
+          opacity: 1;
+        }
+
+        &:first-child {
+          border-radius: 14px 0 0 14px; // 7px * 2
+        }
+
+        &:last-child {
+          border-radius: 0 14px 14px 0; // 7px * 2
+        }
+      }
+    }
+  }
+
+  // 拍摄说明区域
+  .instruction-section {
+    position: absolute;
+    top: 992px; // 115px * 2
+    left: 0;
+    height: 118px; // 230px * 2
+    z-index: 10;
+    padding: 56px 36px 0; // 18px * 2, 16px * 2
+    display: flex;
+    align-items: flex-start;
+    gap: 32px; // 16px * 2
+
+    .step-image {
+      width: 118px; // 59px * 2
+      height: 118px; // 59px * 2
+      background: #E5E5E5;
+      border-radius: 10px; // 5px * 2
+      position: relative;
+      flex-shrink: 0;
+
+      .step-image-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .required-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 44px; // 22px * 2
+        height: 26px; // 13px * 2
+        background: #FF8C00;
+        border-radius: 10px 0; // 5px * 2
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px; // 8px * 2
+        font-weight: 600;
+        color: #FFF;
+        line-height: 1.625;
+      }
+    }
+
+    .step-content {
+      flex: 1;
+
+      .step-title {
+        font-size: 28px; // 14px * 2
+        font-weight: 600;
+        color: #DEFC52;
+        line-height: 1.07;
+        margin-bottom: 16px; // 8px * 2
+      }
+
+      .step-description {
+        font-size: 22px; // 11px * 2
+        font-weight: 400;
+        color: #FFF;
+        line-height: 1.36;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  // 底部控制区域
+  .bottom-controls {
+    position: absolute;
+    top: 1156px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 60px 80px 32px; // 30px * 2, 16px * 2
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .control-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .control-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px; // 4px * 2
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .torch-icon{
+          width: 32px; // 16px * 2
+          height: 42px; // 21px * 2
+          transition: all 0.3s ease;
+        }
+
+        .album-icon {
+          width: 40px; // 16px * 2
+          height: 38px; // 21px * 2
+          transition: all 0.3s ease;
+        }
+
+        .control-text {
+          font-size: 18px; // 9px * 2
+          font-weight: 500;
+          color: #FFF;
+          line-height: 1.11;
+          transition: all 0.3s ease;
+        }
+
+        // 手电筒激活状态
+        &.torch-active {
+          .torch-icon {
+            background: #FFD700; // 金色表示手电筒开启
+            box-shadow: 0 0 20px rgba(255, 215, 0, 60%); // 发光效果
+          }
+          
+          .control-text {
+            color: #FFD700;
+          }
+        }
+
+        // 点击反馈
+        &:active {
+          transform: scale(0.9);
+          opacity: 0.8;
+        }
+
+        // 已拍照状态的三个按钮样式
+        &.photo-control {
+          width: 116px; // 58px * 2 (Figma设计)
+          height: 116px; // 58px * 2
+          border: 2px solid #FFF; // 1px * 2
+          border-radius: 50%;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .control-text {
+            font-size: 24px; // 12px * 2 (Figma设计)
+            font-weight: 500;
+            color: #FFF;
+            line-height: 0.83;
+            text-align: center;
+          }
+
+          // 点击反馈
+          &:active {
+            transform: scale(0.9);
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .capture-button {
+        width: 144px; // 72px * 2
+        height: 144px; // 72px * 2
+        border: 8px solid #FFF; // 4px * 2
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .capture-icon {
+          width: 64px; // 32px * 2
+          height: 64px; // 32px * 2
+          background: #FFF;
+          border-radius: 50%;
+        }
+      }
+
+    }
+
+    .retake-button {
+      position: absolute;
+      right: 32px; // 16px * 2
+      bottom: 100px; // 50px * 2
+      width: 92px; // 46px * 2
+      height: 92px; // 46px * 2
+      border: 2px solid #DEFC52; // 1px * 2
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .retake-icon {
+        width: 50px; // 25px * 2
+        height: 50px; // 25px * 2
+        background: #DEFC52;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm0 22.5c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='currentColor'/%3E%3C/svg%3E") no-repeat center;
+        mask-size: contain;
+      }
+    }
+  }
+}

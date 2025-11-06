@@ -1,0 +1,28 @@
+import stats_card_icon from './stats_card_icon.png';
+import back_white_icon from '@/assets/icons/back_white_icon.png';
+import forward_icon from '@/assets/icons/forward_icon.png';
+
+export const IMG_header_banner = 'https://m.hellobike.com/resource/gallery/146/WH7JGaID_shelves-ranking-bg.jpg?x-oss-process=image/quality,q_80';
+export const IMG_stats_card_icon = stats_card_icon;
+export const backWhiteIcon = back_white_icon;
+export const forwardIcon = forward_icon;
+export const StarCard_icon = 'https://m.hellobike.com/resource/gallery/92/0OS9ymV4_taichi_image.png';
+export const StarCard_icon_white = 'https://m.hellobike.com/resource/gallery/92/GP4xS2lW_taichi_image.png';
+export const StarCard_home_bg = 'https://m.hellobike.com/resource/gallery/92/dlEYQJR1_taichi_image.png';
+export const scanIcon = 'https://m.hellobike.com/resource/gallery/92/RNR6sCCR_taichi_image.png';
+export const identifyText = 'https://m.hellobike.com/resource/gallery/92/WKS6PzmB_taichi_image.png';
+export const identifyText_icon = 'https://m.hellobike.com/resource/gallery/92/21jUo7pP_taichi_image.png';
+export const historySectionTitle = 'https://m.hellobike.com/resource/gallery/92/kiVCxiso_taichi_image.png';
+export const cardDecoration = 'https://m.hellobike.com/resource/gallery/92/LXjbY5z__taichi_image.png';
+export const appraisalPassed = 'https://m.hellobike.com/resource/gallery/92/Z_vTBn4T_taichi_image.png';
+export const resultBgImage = 'https://m.hellobike.com/resource/gallery/92/Lw0SD8W5_taichi_image.png';
+export const checkSuccess = 'https://m.hellobike.com/resource/gallery/92/BvUA7uS0_taichi_image.png';
+export const settingsIcon = 'https://m.hellobike.com/resource/gallery/92/QvxK6yms_taichi_image.png';
+export const exampleImage1 = 'https://m.hellobike.com/resource/gallery/92/7fVot3e1_taichi_image.png';
+export const exampleImage2 = 'https://m.hellobike.com/resource/gallery/92/xcivWDGk_taichi_image.png';
+export const exampleImage3 = 'https://m.hellobike.com/resource/gallery/92/FRIx5-E5_taichi_image.png';
+export const exampleImage4 = 'https://m.hellobike.com/resource/gallery/92/6IT_s0mi_taichi_image.png';
+export const albumIcon = 'https://m.hellobike.com/resource/gallery/92/IJdS5p2o_taichi_image.png';
+export const torchIcon = 'https://m.hellobike.com/resource/gallery/92/bC9vHsae_taichi_image.png';
+export const underAppraisalBg = 'https://m.hellobike.com/f46293eb_under_%20appraisal_bg.png';
+export const noListIcon = 'https://m.hellobike.com/resource/gallery/92/VY_d3wit_taichi_image.png';

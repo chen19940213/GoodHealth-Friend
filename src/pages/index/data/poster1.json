@@ -1,0 +1,240 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": {
+    "width": "734px",
+    "height": "1096px",
+    "background": "https://m.hellobike.com/resource/helloyun/22132/wbFna_9L2vABu5pJ.jpg",
+    "views": [
+      {
+        "id": "userName",
+        "type": "text",
+        "text": "西子喂猫工程师",
+        "css": {
+          "width": "300px",
+          "textAlign": "center",
+          "top": "12px",
+          "left": "210px",
+          "fontSize": "30px",
+          "color": "#555353",
+          "maxLines": 1,
+          "fontWeight": "600"
+        }
+      },
+      {
+        "id": "avatar",
+        "type": "image",
+        "url": "https://pet-worm.51downapp.cn/avatar/fe819178-5fb7-400e-90ec-cd56ddeab9bc.jpg",
+        "css": {
+          "width": "70px",
+          "height": "70px",
+          "top": "65px",
+          "left": "322px",
+          "mode": "aspectFill",
+          "borderRadius": "35px"
+        }
+      },
+      {
+        "id": "rundaysTitle",
+        "type": "text",
+        "text": "累积运行",
+        "css": {
+          "width": "120px",
+          "top": "185px",
+          "left": "225px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "rundaysValue",
+        "type": "text",
+        "text": "380",
+        "css": {
+          "textAlign": "right",
+          "top": "230px",
+          "right": "420px",
+          "fontSize": "34px",
+          "color": "#ffffff",
+          "maxLines": 1,
+          "fontWeight": "600"
+        }
+      },
+      {
+        "id": "rundaysSku",
+        "type": "text",
+        "text": "天",
+        "css": {
+          "textAlign": "center",
+          "top": "238px",
+          "right": "390px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "feedTitle",
+        "type": "text",
+        "text": "累积喂食",
+        "css": {
+          "width": "120px",
+          "top": "185px",
+          "left": "465px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "feedValue",
+        "type": "text",
+        "text": "54880",
+        "css": {
+          "textAlign": "right",
+          "top": "230px",
+          "right": "180px",
+          "fontSize": "34px",
+          "color": "#ffffff",
+          "maxLines": 1,
+          "fontWeight": "600"
+        }
+      },
+      {
+        "id": "feedSku",
+        "type": "text",
+        "text": "克",
+        "css": {
+          "textAlign": "center",
+          "top": "238px",
+          "right": "150px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "waterTitle",
+        "type": "text",
+        "text": "累积喂水",
+        "css": {
+          "width": "120px",
+          "top": "315px",
+          "left": "225px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "waterValue",
+        "type": "text",
+        "text": "0",
+        "css": {
+          "textAlign": "right",
+          "top": "360px",
+          "right": "420px",
+          "fontSize": "34px",
+          "color": "#ffffff",
+          "maxLines": 1,
+          "fontWeight": "600"
+        }
+      },
+      {
+        "id": "waterSku",
+        "type": "text",
+        "text": "升",
+        "css": {
+          "textAlign": "center",
+          "top": "368px",
+          "right": "390px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "peopleTitle",
+        "type": "text",
+        "text": "喂过的好心人",
+        "css": {
+          "width": "180px",
+          "top": "315px",
+          "left": "450px",
+          "fontSize": "26px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "peopleValue",
+        "type": "text",
+        "text": "1209",
+        "css": {
+          "textAlign": "right",
+          "top": "360px",
+          "right": "180px",
+          "fontSize": "34px",
+          "color": "#ffffff",
+          "maxLines": 1,
+          "fontWeight": "600"
+        }
+      },
+      {
+        "id": "peopleSku",
+        "type": "text",
+        "text": "人",
+        "css": {
+          "textAlign": "center",
+          "top": "368px",
+          "right": "150px",
+          "fontSize": "28px",
+          "color": "#ffffff",
+          "maxLines": 1
+        }
+      },
+      {
+        "id": "coverImg",
+        "type": "image",
+        "url": "https://pet-miaowa.51downapp.cn//1698052537815-02579d4a-d921-4f0b.jpg",
+        "css": {
+          "width": "363px",
+          "height": "250px",
+          "top": "486px",
+          "left": "42px",
+          "mode": "aspectFill",
+          "borderRadius": "6px"
+        }
+      },
+      {
+        "id": "thanksText",
+        "type": "text",
+        "text": "    出差一月辛苦大家多投喂很多猫猫屋现在十分需要你，快来加入我们吧，一起来改善流浪猫的生存环境！",
+        "css": {
+          "width": "278px",
+          "textAlign": "left",
+          "top": "490px",
+          "right": "35px",
+          "fontSize": "24px",
+          "color": "#333333",
+          "maxLines": 5,
+          "lineHeight": "45px"
+        }
+      },
+      {
+        "id": "qrcode",
+        "type": "image",
+        "url": "https://pet-miaowa.51downapp.cn//1730370515976-4363ff99-d35c-4552.jpg",
+        "css": {
+          "width": "200px",
+          "height": "200px",
+          "bottom": "170px",
+          "right": "20px",
+          "mode": "aspectFill",
+          "borderRadius": "35px"
+        }
+      }
+    ]
+  }
+}

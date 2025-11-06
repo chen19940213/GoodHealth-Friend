@@ -1,0 +1,2 @@
+@import './global.ttss';
+@import './common.ttss';

@@ -1,0 +1,103 @@
+.page-nickname-edit-view {
+  background: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  // 顶部导航栏
+  .nav-bar {
+    position: relative;
+    height: 162px; // 81px * 2
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 22px; // 11px * 2
+
+    .back-btn {
+      position: absolute;
+      left: 28px; // 14px * 2
+      bottom: 22px; // 11px * 2
+      width: 33.2px; // 16.6px * 2
+      height: 30px; // 15px * 2
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+
+      .back-icon {
+        width: 20px; // 10px * 2
+        height: 36px; // 18px * 2
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+        transform: rotate(45deg);
+      }
+    }
+
+    .nav-title {
+      font-size: 32px; // 16px * 2
+      font-weight: 400;
+      color: #000;
+      line-height: 1.4;
+    }
+
+    .complete-btn {
+      position: absolute;
+      right: 36px; // 18px * 2
+      bottom: 22px; // 11px * 2
+      font-size: 32px; // 16px * 2
+      font-weight: 500;
+      color: #000;
+      line-height: 1.4;
+      opacity: 0.4;
+      cursor: not-allowed;
+
+      &.active {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // 输入提示
+  .input-hint {
+    padding: 0 36px; // 18px * 2
+    margin-top: 102px; // 51px * 2
+    margin-bottom: 34px; // 17px * 2
+    font-size: 28px; // 14px * 2
+    font-weight: 400;
+    color: #879099;
+    line-height: 1.4;
+  }
+
+  // 输入框区域
+  .input-section {
+    margin: 0 36px; // 18px * 2
+    padding: 18px 44px; // 9px * 2, 22px * 2
+    background: #F5F5F5;
+    border-radius: 32px; // 16px * 2
+    display: flex;
+    align-items: center;
+    min-height: 108px; // 54px * 2
+    position: relative;
+
+    .nickname-input {
+      flex: 1;
+      font-size: 32px; // 16px * 2
+      font-weight: 400;
+      color: #242729;
+      line-height: 1.4;
+      border: none;
+      background: transparent;
+    }
+
+    .char-count {
+      font-size: 28px; // 14px * 2
+      font-weight: 400;
+      color: #879099;
+      line-height: 1.4;
+      margin-left: 32px;
+      flex-shrink: 0;
+    }
+  }
+}
+

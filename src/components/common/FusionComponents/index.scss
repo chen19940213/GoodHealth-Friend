@@ -1,0 +1,95 @@
+.fusion-components-view {
+    margin: 40px 20px 30px;
+   // border: 1px solid #ebebeb;
+    position: relative;
+    background: #ececec;
+    border-radius: 8px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    font-size: 24px;
+    word-break: break-word;
+
+    .title {
+        font-size: 26px;
+        font-weight: bold;
+        color: #333;
+        padding: 12px 0;
+    }
+
+    .stats-info-row {
+        display: flex;
+        flex-direction: row;
+    
+        .stats-card-item {
+          flex: 1;
+        }
+      }
+
+    .video-player {
+      width: 100%;
+      margin: 0;
+    }
+
+    .barrage-view {
+      color: #fff;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      z-index: 1;
+      height: 200px;
+      width: 100%;
+    }
+
+    .fusion-liveplayer {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 60vw;
+      margin-bottom: 10rpx;
+    }
+
+    .opt-btn-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      button {
+        border-radius: 10px;
+        font-size: 24px;
+        height: 60px;
+        line-height: 60px;
+        width: 100%;
+        background: #04a33c;
+        border: none;
+      }
+    }
+
+    .fusion-input {
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        padding: 0 12px;
+        box-sizing: border-box;
+        font-size: 24px;
+    }
+
+    .fusion-selector {
+      display: flex;
+      flex-direction: row;
+      font-size: 24px;
+      padding: 24px 12px;
+      background: #fff;
+    }
+
+    .poster-loading {
+      height: 80px;
+      width: 100%;
+      text-align: center;
+      line-height: 80px;
+      font-size: 24px;
+      color: #999;
+    }
+  }

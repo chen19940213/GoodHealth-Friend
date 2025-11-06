@@ -1,0 +1,68 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/about/about.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-about-view {
+  background: #F5F5F5;
+  min-height: 100vh;
+}
+.page-about-view .empty-view {
+  width: 100vw;
+  height: 20rpx;
+  background-color: #FFF;
+}
+.page-about-view .content-section {
+  padding: 48rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400rpx;
+}
+.page-about-view .content-section .app-icon-container {
+  margin-bottom: 28rpx;
+  width: 156rpx;
+  height: 156rpx;
+  background-color: #020301;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-about-view .content-section .app-icon-container .app-icon {
+  width: 114rpx;
+  height: 54rpx;
+}
+.page-about-view .content-section .app-info {
+  text-align: center;
+}
+.page-about-view .content-section .app-info .app-title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #242729;
+  margin-bottom: 8rpx;
+}
+.page-about-view .content-section .app-info .app-version {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #242729;
+}
+.page-about-view .share-section {
+  padding: 40rpx 40rpx 70rpx;
+  background-color: #fff;
+}
+.page-about-view .share-section .share-btn {
+  width: 100%;
+  height: 96rpx;
+  background: #DEFC52;
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.page-about-view .share-section .share-btn .share-text {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+}

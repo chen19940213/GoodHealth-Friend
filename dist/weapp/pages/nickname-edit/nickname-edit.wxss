@@ -1,0 +1,92 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/nickname-edit/nickname-edit.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-nickname-edit-view {
+  background: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page-nickname-edit-view .nav-bar {
+  position: relative;
+  height: 162rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 22rpx;
+}
+.page-nickname-edit-view .nav-bar .back-btn {
+  position: absolute;
+  left: 28rpx;
+  bottom: 22rpx;
+  width: 33.2rpx;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.page-nickname-edit-view .nav-bar .back-btn .back-icon {
+  width: 20rpx;
+  height: 36rpx;
+  border-left: 2rpx solid #000;
+  border-bottom: 2rpx solid #000;
+  transform: rotate(45deg);
+}
+.page-nickname-edit-view .nav-bar .nav-title {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.4;
+}
+.page-nickname-edit-view .nav-bar .complete-btn {
+  position: absolute;
+  right: 36rpx;
+  bottom: 22rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.page-nickname-edit-view .nav-bar .complete-btn.active {
+  opacity: 1;
+  cursor: pointer;
+}
+.page-nickname-edit-view .input-hint {
+  padding: 0 36rpx;
+  margin-top: 102rpx;
+  margin-bottom: 34rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #879099;
+  line-height: 1.4;
+}
+.page-nickname-edit-view .input-section {
+  margin: 0 36rpx;
+  padding: 18rpx 44rpx;
+  background: #F5F5F5;
+  border-radius: 32rpx;
+  display: flex;
+  align-items: center;
+  min-height: 108rpx;
+  position: relative;
+}
+.page-nickname-edit-view .input-section .nickname-input {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #242729;
+  line-height: 1.4;
+  border: none;
+  background: transparent;
+}
+.page-nickname-edit-view .input-section .char-count {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #879099;
+  line-height: 1.4;
+  margin-left: 32rpx;
+  flex-shrink: 0;
+}

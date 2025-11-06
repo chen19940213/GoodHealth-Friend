@@ -1,0 +1,221 @@
+{
+  "width": "632rpx",
+  "height": "1073rpx",
+  "background": "https://m.hellobike.com/resource/gallery/186/XXo2FlDl_taichi_image.png",
+  "views": [
+    {
+      "id": "avatar",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/zHShpuqf_taichi_image.png",
+      "css": {
+        "width": "200rpx",
+        "height": "200rpx",
+        "top": "0rpx",
+        "left": "70rpx",
+        "mode": "aspectFill",
+        "borderRadius": "100rpx"
+      }
+    },
+    {
+      "id": "avatarPendant",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/53YAOf2P_taichi_image.png",
+      "css": {
+        "width": "200rpx",
+        "height": "200rpx",
+        "top": "0rpx",
+        "left": "70rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "name",
+      "type": "text",
+      "text": "123",
+      "css": {
+        "width": "308rpx",
+        "height": "48rpx",
+        "lineHeight": "48rpx",
+        "textAlign": "left",
+        "top": "124rpx",
+        "left": "288rpx",
+        "fontSize": "32rpx",
+        "color": "#292929",
+        "maxLines": 1,
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "id": "thanksText",
+      "type": "text",
+      "text": "感谢你～你的支持，帮助冬天里的猫猫有了暖暖的容身之处！你的心意将会被街猫永远记得。",
+      "css": {
+        "width": "470px",
+        "maxLines": 3,
+        "lineHeight": "44px",
+        "height": "132px",
+        "textAlign": "left",
+        "top": "240px",
+        "left": "84px",
+        "fontSize": "24px",
+        "color": "#F89064",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "id": "supportName",
+      "type": "text",
+      "text": "支持猫屋：新鲜哥的独享城堡JOJO",
+      "css": {
+        "width": "594rpx",
+        "height": "34rpx",
+        "lineHeight": "34rpx",
+        "textAlign": "left",
+        "top": "398rpx",
+        "left": "70rpx",
+        "fontSize": "24rpx",
+        "color": "#A2593A",
+        "maxLines": 1,
+        "fontWeight": "400"
+      }
+    },
+    {
+      "id": "supportTime",
+      "type": "text",
+      "text": "支持时间：2024年12月20日",
+      "css": {
+        "width": "594rpx",
+        "height": "34rpx",
+        "lineHeight": "34rpx",
+        "textAlign": "left",
+        "top": "440rpx",
+        "left": "70rpx",
+        "fontSize": "24rpx",
+        "color": "#A2593A",
+        "maxLines": 1,
+        "fontWeight": "400"
+      }
+    },
+    {
+      "id": "textLineFirst",
+      "type": "text",
+      "text": "恭喜你啊👏，解锁了新的头像挂件",
+      "css": {
+        "width": "500rpx",
+        "height": "40rpx",
+        "lineHeight": "40rpx",
+        "textAlign": "left",
+        "top": "528rpx",
+        "left": "68rpx",
+        "fontSize": "24rpx",
+        "color": "#000000",
+        "maxLines": 1,
+        "fontWeight": "400",
+        "whiteSpace": "nowrap",
+        "overflow": "hidden"
+      }
+    },
+    {
+      "id": "pendant",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/I7S03ZY5_taichi_image.png",
+      "css": {
+        "width": "104rpx",
+        "height": "40rpx",
+        "top": "518rpx",
+        "left": "432rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "textLineSecond",
+      "type": "text",
+      "text": "祝愿美美的挂件能够陪你度过暖暖的冬天❤️～",
+      "css": {
+        "width": "500rpx",
+        "height": "40rpx",
+        "lineHeight": "40rpx",
+        "textAlign": "left",
+        "top": "568rpx",
+        "left": "68rpx",
+        "fontSize": "24rpx",
+        "color": "#000000",
+        "maxLines": 1,
+        "fontWeight": "400",
+        "whiteSpace": "nowrap"
+      }
+    },
+    {
+      "id": "pendantFirst",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/Lmudbok4_taichi_image.png",
+      "css": {
+        "width": "96rpx",
+        "height": "172rpx",
+        "top": "640rpx",
+        "left": "50rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "pendantSecond",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/Lmudbok4_taichi_image.png",
+      "css": {
+        "width": "96rpx",
+        "height": "172rpx",
+        "top": "640rpx",
+        "left": "158rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "pendantThird",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/Lmudbok4_taichi_image.png",
+      "css": {
+        "width": "96rpx",
+        "height": "172rpx",
+        "top": "640rpx",
+        "left": "266rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "pendantFourth",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/Lmudbok4_taichi_image.png",
+      "css": {
+        "width": "96rpx",
+        "height": "172rpx",
+        "top": "640rpx",
+        "left": "374rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "pendantFifth",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/Lmudbok4_taichi_image.png",
+      "css": {
+        "width": "96rpx",
+        "height": "172rpx",
+        "top": "640rpx",
+        "left": "482rpx",
+        "mode": "aspectFill"
+      }
+    },
+    {
+      "id": "qrcode",
+      "type": "image",
+      "url": "https://m.hellobike.com/resource/gallery/186/vYbDB7Tw_taichi_image.png",
+      "css": {
+        "width": "120rpx",
+        "height": "120rpx",
+        "top": "880rpx",
+        "left": "40rpx",
+        "mode": "aspectFill"
+      }
+    }
+  ]
+}

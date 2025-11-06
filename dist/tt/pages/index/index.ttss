@@ -1,0 +1,264 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page-index-view {
+  background: #FFF;
+  min-height: 100vh;
+}
+.page-index-view .top-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 290rpx;
+  background: linear-gradient(90deg, #F3FFE5 0%, #E4FAFF 100%);
+  z-index: 0;
+}
+.page-index-view .left-gradient-bg {
+  position: absolute;
+  top: 290rpx;
+  left: 0;
+  right: 0;
+  height: 240rpx;
+  width: 60rpx;
+  z-index: 0;
+  background: linear-gradient(180deg, #F3FFE5 0.83%, #FFF 96.25%);
+}
+.page-index-view .right-gradient-bg {
+  position: absolute;
+  top: 290rpx;
+  right: 0;
+  height: 240rpx;
+  width: 60rpx;
+  background: linear-gradient(180deg, #E9FBFE 6.67%, #FFF 100%);
+  z-index: 0;
+}
+.page-index-view .top-decoration-bg {
+  position: absolute;
+  top: 100rpx;
+  right: 0;
+  width: 264rpx;
+  height: 166rpx;
+  z-index: 0;
+}
+.page-index-view > div {
+  position: relative;
+  z-index: 1;
+}
+.page-index-view .header-view {
+  display: none;
+}
+.page-index-view .page-title-section {
+  position: relative;
+  z-index: 1;
+  padding: 142rpx 32rpx 0;
+}
+.page-index-view .page-title-section .main-title {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-bottom: 0;
+}
+.page-index-view .page-title-section .main-title .title-text {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+.page-index-view .page-title-section .main-title .title-text .star-card-icon {
+  width: 80rpx;
+  height: 38rpx;
+}
+.page-index-view .page-title-section .main-title .title-icon {
+  width: 13rpx;
+  height: 10rpx;
+  background: #BCE100;
+  flex-shrink: 0;
+}
+.page-index-view .page-title-section .divider {
+  width: 2rpx;
+  height: 28rpx;
+  background: #242729;
+  flex-shrink: 0;
+}
+.page-index-view .page-title-section .subtitle {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #242729;
+  line-height: 1.4;
+  flex: 1;
+}
+.page-index-view .main-card-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 24rpx;
+  margin-top: 52rpx;
+  margin-bottom: 52rpx;
+}
+.page-index-view .main-card-section .main-card {
+  width: 100%;
+  height: 440rpx;
+  border-radius: 28rpx;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #66696D 32.73%, #77787F 100%);
+}
+.page-index-view .main-card-section .main-card .card-top {
+  border-radius: 28rpx;
+  flex: 1;
+  background: linear-gradient(90deg, #000 0%, #2F350C 100%);
+  padding: 40rpx 36rpx 38rpx;
+  position: relative;
+  z-index: 2;
+}
+.page-index-view .main-card-section .main-card .card-top .card-title {
+  width: 192rpx;
+  height: 32rpx;
+  margin-bottom: 12rpx;
+}
+.page-index-view .main-card-section .main-card .card-top .card-description {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 1.4;
+  margin-bottom: 24rpx;
+}
+.page-index-view .main-card-section .main-card .card-top .card-description .description-icon {
+  width: 24rpx;
+  height: 22rpx;
+  flex-shrink: 0;
+}
+.page-index-view .main-card-section .main-card .card-top .card-feature {
+  margin-bottom: 80rpx;
+  height: 26rpx;
+  overflow: hidden;
+}
+.page-index-view .main-card-section .main-card .card-top .card-feature .feature-swiper {
+  width: 100%;
+  height: 26rpx;
+  overflow: hidden;
+}
+.page-index-view .main-card-section .main-card .card-top .card-feature .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  height: 26rpx;
+}
+.page-index-view .main-card-section .main-card .card-top .card-feature .feature-icon {
+  width: 26rpx;
+  height: 26rpx;
+  background: #DEFC52;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.page-index-view .main-card-section .main-card .card-top .card-feature .feature-text {
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 26rpx;
+  height: 26rpx;
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button {
+  width: 100%;
+  max-width: 630rpx;
+  height: 82rpx;
+  background: #DEFC52;
+  border-radius: 41rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button:active {
+  background: #C4E73A;
+  transform: scale(0.98);
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button .button-icon {
+  width: 28rpx;
+  height: 28rpx;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button .button-icon .icon-image {
+  width: 100%;
+  height: 100%;
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button .button-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28rpx;
+  height: 3rpx;
+  background: #2BDB82;
+  pointer-events: none;
+}
+.page-index-view .main-card-section .main-card .card-top .identify-button .button-text {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+}
+.page-index-view .main-card-section .main-card .card-bottom {
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 36rpx;
+}
+.page-index-view .main-card-section .main-card .card-bottom .stats-text {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #E7E7E7;
+  line-height: 1.4;
+  text-align: center;
+}
+.page-index-view .main-card-section .main-card .card-bottom .stats-text .highlight-number {
+  margin-left: 20rpx;
+  color: #FFF;
+  font-family: DIN, sans-serif;
+  font-weight: 500;
+  font-size: 28rpx;
+  line-height: 1.21;
+  display: inline;
+}
+.page-index-view .main-card-section .main-card .card-decoration {
+  position: absolute;
+  top: 27rpx;
+  right: 32rpx;
+  width: 158rpx;
+  height: 157rpx;
+  z-index: 10;
+}
+.page-index-view .history-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 32rpx;
+  margin-bottom: 28rpx;
+}
+.page-index-view .history-section .history-title .title-image {
+  width: 216rpx;
+  height: 36rpx;
+}
+.page-index-view .image-grid-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 24rpx 80rpx;
+}
+.page-index-view .image-grid-section .image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 342rpx);
+  grid-template-rows: auto;
+  gap: 18rpx;
+  justify-content: space-between;
+}

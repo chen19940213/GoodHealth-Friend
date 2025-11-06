@@ -1,0 +1,176 @@
+.page-login-view {
+  background: #FFF;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  // 顶部渐变背景
+  .top-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 528px; // 264px * 2
+    background: linear-gradient(
+      180deg,
+      #F3FFE5 56.11%,
+      rgba(243, 255, 229, 0%) 100%
+    );
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 350px; // 175px * 2
+      height: 528px; // 264px * 2
+      background: linear-gradient(
+        270deg,
+        #E9FBFE 0%,
+        rgba(233, 251, 254, 0%) 100%
+      );
+    }
+  }
+
+  // 返回按钮
+  .back-btn {
+    position: absolute;
+    top: 107px; // 53.5px * 2
+    left: 24px; // 12px * 2
+    width: 48px; // 24px * 2
+    height: 48px; // 24px * 2
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+
+    .back-icon {
+      width: 20px; // 10px * 2
+      height: 36px; // 18px * 2
+      border-left: 2px solid #242729;
+      border-bottom: 2px solid #242729;
+      transform: rotate(45deg);
+    }
+  }
+
+  // Logo 区域
+  .logo-section {
+    position: relative;
+    z-index: 1;
+    padding-top: 256px; // 128px * 2
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo-box {
+      width: 156px; // 78px * 2
+      height: 156px; // 78px * 2
+      background: #020301;
+      border-radius: 24px; // 12px * 2
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px; // 20px * 2
+
+      .logo-text {
+        font-family: 'MF YuanHei(Noncommercial)', 'PingFang SC', sans-serif;
+        font-weight: 400;
+        font-size: 56.7px; // 28.36px * 2
+        color: #FFF;
+        line-height: 0.95;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -18px; // -9px * 2
+          top: 33.7px; // 16.9px * 2
+          width: 17.8px; // 8.88px * 2
+          height: 14.2px; // 7.12px * 2
+          background: #BCE100;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .slogan {
+      font-size: 28px; // 14px * 2
+      font-weight: 500;
+      color: #242729;
+      line-height: 1.4;
+    }
+  }
+
+  // 登录按钮区域
+  .login-actions {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 56px 140px; // 28px * 2, 70px * 2
+
+    .auth-login-btn {
+      width: 100%;
+      height: 104px; // 52px * 2
+      background: #1B1B1B;
+      border-radius: 60px; // 30px * 2
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px; // 18px * 2
+      font-weight: 500;
+      color: #FFF;
+      line-height: 1.4;
+      border: none;
+      margin-bottom: 28px; // 14px * 2
+      cursor: pointer;
+      padding: 0;
+      text-align: center;
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+
+    .wx-auth-btn {
+      width: 100%;
+      height: 104px; // 52px * 2
+      background: #07C160;
+      border-radius: 60px; // 30px * 2
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px; // 18px * 2
+      font-weight: 500;
+      color: #FFF;
+      line-height: 1.4;
+      border: none;
+      margin-bottom: 28px; // 14px * 2
+      cursor: pointer;
+      padding: 0;
+      text-align: center;
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+
+    .phone-login-text {
+      font-size: 28px; // 14px * 2
+      font-weight: 400;
+      color: #5A6066;
+      line-height: 1.4;
+      text-align: center;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}
