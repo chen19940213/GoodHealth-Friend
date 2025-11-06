@@ -1,5 +1,5 @@
 export default {
-  navigationBarTitleText: '个人资料',
+  navigationBarTitleText: '反馈问题',
   navigationBarBackgroundColor: '#FFFFFF',
   navigationStyle: 'custom',
   enableShareAppMessage: false,

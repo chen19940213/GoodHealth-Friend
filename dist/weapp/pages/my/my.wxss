@@ -1,6 +1,7 @@
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/my/my.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 .page-my-view {
   background: #FFFFFF;
   min-height: 100vh;
@@ -22,7 +23,7 @@
 .page-my-view .user-section {
   position: relative;
   z-index: 1;
-  padding: 160rpx 28rpx 0;
+  padding: 120rpx 24rpx 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -30,8 +31,9 @@
 }
 .page-my-view .user-section .user-info-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24rpx;
+  cursor: pointer;
 }
 .page-my-view .user-section .user-info-container .user-avatar {
   width: 158rpx;
@@ -39,19 +41,27 @@
   border-radius: 50%;
   background: #FFD5DF;
   flex-shrink: 0;
-  border: none;
+  border: 4rpx solid #FFFFFF;
+  box-sizing: border-box;
 }
 .page-my-view .user-section .user-info-container .user-info {
   display: flex;
   flex-direction: column;
   gap: 8rpx;
-  padding-top: 16rpx;
+  flex: 1;
 }
 .page-my-view .user-section .user-info-container .user-info .user-nickname {
-  font-size: 36rpx;
-  font-weight: 500;
+  font-size: 40rpx;
+  font-weight: 600;
   color: #242729;
   line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+.page-my-view .user-section .user-info-container .user-info .user-nickname .edit-icon {
+  font-size: 28rpx;
+  color: #FF5078;
 }
 .page-my-view .user-section .user-info-container .user-info .login-text-btn {
   font-size: 36rpx;
@@ -64,54 +74,40 @@
   line-height: 1.4;
 }
 .page-my-view .user-section .settings-icon-wrapper {
-  width: 44rpx;
-  height: 44rpx;
+  width: 40rpx;
+  height: 40rpx;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-.page-my-view .user-section .settings-icon-wrapper .settings-icon {
-  width: 22rpx;
-  height: 22rpx;
-  background: #FF5078;
+  background: #FFFFFF;
   border-radius: 50%;
 }
-.page-my-view .reason-section {
-  position: relative;
-  z-index: 1;
-  padding: 28rpx 28rpx 0;
-  margin-top: 40rpx;
-}
-.page-my-view .reason-section .reason-text {
-  font-size: 24rpx;
-  color: #242729;
-  line-height: 1.4;
+.page-my-view .user-section .settings-icon-wrapper .settings-icon {
+  width: 20rpx;
+  height: 20rpx;
+  background: #333;
+  border-radius: 50%;
 }
 .page-my-view .tags-section {
   position: relative;
   z-index: 1;
-  padding: 32rpx 28rpx;
+  padding: 24rpx 24rpx 0;
   display: flex;
-  gap: 24rpx;
+  gap: 16rpx;
   flex-wrap: wrap;
 }
 .page-my-view .tags-section .tag-item {
-  height: 66rpx;
-  padding: 0 24rpx;
+  height: 56rpx;
+  padding: 0 20rpx;
   background: #F5F5F5;
-  border-radius: 16rpx;
+  border-radius: 28rpx;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8rpx;
 }
 .page-my-view .tags-section .tag-item .tag-icon {
-  width: 30rpx;
-  height: 30rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 24rpx;
 }
 .page-my-view .tags-section .tag-item .tag-text {
@@ -119,39 +115,94 @@
   color: #242729;
   line-height: 1.4;
 }
+.page-my-view .reason-section {
+  position: relative;
+  z-index: 1;
+  padding: 20rpx 24rpx 0;
+}
+.page-my-view .reason-section .reason-text {
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.5;
+}
 .page-my-view .feedback-card {
   position: relative;
   z-index: 1;
-  margin: 28rpx;
-  padding: 32rpx;
-  background: #FFFFFF;
-  border-radius: 16rpx;
-  box-shadow: 0rpx 4rpx 16rpx rgba(0, 0, 0, 0.08);
-  display: flex;
-  gap: 24rpx;
-}
-.page-my-view .feedback-card .feedback-avatar {
-  width: 154rpx;
-  height: 158rpx;
-  background: #FF4D76;
+  margin: 24rpx;
+  padding: 32rpx 24rpx;
+  background: #FF5078;
   border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  cursor: pointer;
+  box-shadow: 0rpx 4rpx 12rpx rgba(255, 80, 120, 0.2);
+}
+.page-my-view .feedback-card .feedback-pig {
+  width: 120rpx;
+  height: 120rpx;
+  background: #FFD5DF;
+  border-radius: 50%;
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.page-my-view .feedback-card .feedback-pig::before {
+  content: "🐷";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60rpx;
 }
 .page-my-view .feedback-card .feedback-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 8rpx;
+}
+.page-my-view .feedback-card .feedback-content .feedback-welcome {
+  font-size: 24rpx;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+.page-my-view .feedback-card .feedback-content .feedback-action {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+.page-my-view .feedback-card .feedback-button {
+  padding: 12rpx 20rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  flex-shrink: 0;
+}
+.page-my-view .feedback-card .feedback-button .feedback-button-text {
+  font-size: 24rpx;
+  color: #FF5078;
+  font-weight: 500;
+}
+.page-my-view .stats-card {
+  position: relative;
+  z-index: 1;
+  margin: 0 24rpx 24rpx;
+  padding: 32rpx;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  box-shadow: 0rpx 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
   gap: 16rpx;
 }
-.page-my-view .feedback-card .feedback-content .feedback-title {
+.page-my-view .stats-card .stats-text {
   font-size: 28rpx;
   color: #242729;
-  line-height: 1.4;
+  line-height: 1.5;
 }
-.page-my-view .feedback-card .feedback-content .feedback-subtitle {
-  font-size: 28rpx;
-  color: #242729;
-  line-height: 1.4;
+.page-my-view .stats-card .stats-text .stats-highlight {
+  color: #FF5078;
+  font-weight: 600;
 }
 .page-my-view .action-buttons {
   position: relative;
@@ -176,4 +227,242 @@
 }
 .page-my-view .action-buttons .action-btn:active {
   opacity: 0.9;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/SocialModal/index.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.social-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.social-modal .modal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.social-modal .modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 750rpx;
+  background: #FFFFFF;
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2001;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+.social-modal .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.social-modal .modal-header .header-back {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.social-modal .modal-header .header-back .back-icon {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
+}
+.social-modal .modal-header .header-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+.social-modal .modal-header .header-close {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.social-modal .modal-header .header-close .close-icon {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
+}
+.social-modal .modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-modal .modal-body .device-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.social-modal .modal-body .device-top .device-slot {
+  width: 200rpx;
+  height: 40rpx;
+  background: #7FFF00;
+  border-radius: 8rpx 8rpx 0 0;
+  position: relative;
+}
+.social-modal .modal-body .device-top .device-slot::before {
+  content: "";
+  position: absolute;
+  top: 8rpx;
+  left: 20rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background: #000;
+  border-radius: 50%;
+}
+.social-modal .modal-body .device-top .device-slot::after {
+  content: "";
+  position: absolute;
+  top: 12rpx;
+  right: 20rpx;
+  width: 20rpx;
+  height: 4rpx;
+  background: #FFF;
+  border-radius: 2rpx;
+}
+.social-modal .modal-body .paper-content {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2rpx dashed #E0E0E0;
+  border-radius: 16rpx;
+  padding: 40rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+  position: relative;
+}
+.social-modal .modal-body .paper-content::before {
+  content: "";
+  position: absolute;
+  top: -2rpx;
+  left: -2rpx;
+  right: -2rpx;
+  bottom: -2rpx;
+  border: 2rpx dashed #E0E0E0;
+  border-radius: 16rpx;
+  background: transparent;
+}
+.social-modal .modal-body .paper-content .paper-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+.social-modal .modal-body .paper-content .paper-subtitle {
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+.social-modal .modal-body .paper-content .qr-placeholder {
+  width: 300rpx;
+  height: 300rpx;
+  background: #F5F5F5;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0;
+}
+.social-modal .modal-body .paper-content .qr-placeholder .qr-label {
+  font-size: 24rpx;
+  color: #999;
+}
+.social-modal .modal-body .paper-content .paper-instruction {
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+}
+.social-modal .modal-body .qr-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32rpx;
+}
+.social-modal .modal-body .qr-section .qr-placeholder {
+  width: 300rpx;
+  height: 300rpx;
+  background: #F5F5F5;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-modal .modal-body .qr-section .qr-placeholder .qr-label {
+  font-size: 24rpx;
+  color: #999;
+}
+.social-modal .modal-body .qr-section .wechat-id-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+  cursor: pointer;
+}
+.social-modal .modal-body .qr-section .wechat-id-section .wechat-id-label {
+  font-size: 24rpx;
+  color: #666;
+}
+.social-modal .modal-body .qr-section .wechat-id-section .wechat-id-value {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #FF5078;
+}
+.social-modal .modal-footer {
+  padding: 24rpx;
+  border-top: 1rpx solid #F5F5F5;
+}
+.social-modal .modal-footer .submit-button {
+  width: 100%;
+  height: 88rpx;
+  background: #FF5078;
+  border: 3rpx solid #000000;
+  border-radius: 44rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 0;
+  box-shadow: inset 0rpx -10rpx 0rpx 0rpx rgba(0, 0, 0, 0.25);
+}
+.social-modal .modal-footer .submit-button:active {
+  opacity: 0.9;
+}
+.social-modal .modal-footer .submit-button::after {
+  border: none;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

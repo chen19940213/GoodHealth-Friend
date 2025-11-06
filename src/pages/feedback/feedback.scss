@@ -1,0 +1,179 @@
+.page-feedback-view {
+  background: #FFFFFF;
+  min-height: 100vh;
+
+  // Header 区域样式覆盖
+  :global(.page-skeleton__header) {
+    height: auto !important;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-bar {
+    background: #FFFFFF;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    .nav-back {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .back-icon {
+        font-size: 32px;
+        color: #333;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+
+    .nav-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: #333;
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .feedback-content {
+    padding: 100px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .input-label {
+      font-size: 28px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .input-wrapper {
+      position: relative;
+      background: #F5F5F5;
+      border-radius: 16px;
+      padding: 24px;
+      min-height: 300px;
+      box-sizing: border-box;
+
+      .feedback-input {
+        width: 100%;
+        min-height: 250px;
+        font-size: 28px;
+        color: #333;
+        line-height: 1.5;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      .char-count {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        font-size: 24px;
+        color: #999;
+      }
+    }
+  }
+
+  .instruction-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: #FFF9E6;
+    border-radius: 16px;
+
+    .instruction-text {
+      font-size: 24px;
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .contact-method {
+      font-size: 28px;
+      color: #333;
+      line-height: 1.5;
+
+      .wechat-id {
+        color: #FF5078;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    .qr-placeholder {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      background: #F5F5F5;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      .qr-label {
+        font-size: 24px;
+        color: #999;
+      }
+    }
+  }
+
+  .submit-section {
+    padding: 24px;
+    background: #FFFFFF;
+    border-top: 1px solid #F5F5F5;
+
+    .submit-button {
+      width: 100%;
+      height: 88px;
+      background: #FF5078;
+      border: 3px solid #000000;
+      border-radius: 44px;
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0;
+      box-shadow: inset 0px -10px 0px 0px rgba(0, 0, 0, 0.25);
+
+      &:active {
+        opacity: 0.9;
+      }
+
+      &::after {
+        border: none;
+      }
+    }
+  }
+}
+

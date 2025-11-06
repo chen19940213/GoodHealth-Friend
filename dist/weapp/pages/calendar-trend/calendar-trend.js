@@ -535,7 +535,7 @@ var TrendChart = /*#__PURE__*/function (_Component) {
       }
 
       // 处理当前月数据
-      var currentMonthWeights = dates.map(function (date, index) {
+      var currentMonthWeights = dates.map(function (_, index) {
         var day = index + 1;
         var dateStr = "".concat(year, "-").concat(String(month).padStart(2, '0'), "-").concat(String(day).padStart(2, '0'));
         var data = currentMonthData.find(function (d) {
@@ -545,7 +545,7 @@ var TrendChart = /*#__PURE__*/function (_Component) {
       });
 
       // 处理上月数据
-      var lastMonthWeights = dates.map(function (date, index) {
+      var lastMonthWeights = dates.map(function (_, index) {
         var day = index + 1;
         var lastMonth = month === 1 ? 12 : month - 1;
         var lastYear = month === 1 ? year - 1 : year;
@@ -555,13 +555,13 @@ var TrendChart = /*#__PURE__*/function (_Component) {
         });
         return data ? data.weight : null;
       });
+
+      // 计算初始显示范围（显示前7天）
+      var initialEndPercent = daysInMonth > 7 ? 7 / daysInMonth * 100 : 100;
       var option = {
+        // 标题、图例等配置
         legend: {
-          data: ['本月重量', '上月体重'],
-          top: 10,
-          textStyle: {
-            fontSize: 12
-          }
+          data: ['本月重量', '上月体重']
         },
         grid: {
           left: '3%',
@@ -569,24 +569,33 @@ var TrendChart = /*#__PURE__*/function (_Component) {
           bottom: '15%',
           containLabel: true
         },
+        // X 轴配置
         xAxis: {
           type: 'category',
           data: dates,
-          boundaryGap: false
+          boundaryGap: false // 数据点对齐刻度线
         },
+        // Y 轴配置
         yAxis: {
           type: 'value',
           name: '公斤',
           min: 0,
           max: 90
         },
+        // 数据缩放配置 - 关键部分
         dataZoom: [{
           type: 'slider',
+          // 滑块型数据缩放组件
           xAxisIndex: 0,
+          // 控制第 0 个 X 轴
           start: 0,
-          end: 7 / daysInMonth * 100,
+          // 初始显示范围起始位置（百分比）
+          end: initialEndPercent,
+          // 初始显示范围结束位置（显示前 7 条）
           height: 20,
+          // 滑块高度
           bottom: 10,
+          // 距离底部距离
           handleIcon: 'path://M30.9,48.6L16.8,34.5c-0.6-0.6-0.6-1.5,0-2.1L30.9,18.3c0.6-0.6,1.5-0.6,2.1,0l14.1,14.1c0.6,0.6,0.6,1.5,0,2.1L33,48.6C32.4,49.2,31.5,49.2,30.9,48.6z',
           handleSize: '80%',
           handleStyle: {
@@ -616,13 +625,23 @@ var TrendChart = /*#__PURE__*/function (_Component) {
             areaStyle: {
               color: 'rgba(64,158,255,0.2)'
             }
-          }
+          },
+          // 支持触摸拖动
+          moveHandleSize: 8,
+          moveOnMouseMove: true,
+          preventDefaultMouseMove: true
         }, {
           type: 'inside',
+          // 内置型数据缩放，支持触摸拖动和平移
           xAxisIndex: 0,
           start: 0,
-          end: 7 / daysInMonth * 100
+          end: initialEndPercent,
+          // 支持触摸操作
+          zoomOnMouseWheel: true,
+          moveOnMouseMove: true,
+          moveOnMouseWheel: true
         }],
+        // 系列配置
         series: [{
           name: '本月重量',
           type: 'line',
@@ -631,12 +650,13 @@ var TrendChart = /*#__PURE__*/function (_Component) {
           symbol: 'circle',
           symbolSize: 8,
           itemStyle: {
-            color: '#FF5078'
+            color: '#ff0000'
           },
           lineStyle: {
-            color: '#FF5078',
+            color: '#ff0000',
             width: 2
           },
+          // 关键：添加底部阴影
           areaStyle: {
             color: {
               type: 'linear',
@@ -646,10 +666,10 @@ var TrendChart = /*#__PURE__*/function (_Component) {
               y2: 1,
               colorStops: [{
                 offset: 0,
-                color: 'rgba(255, 80, 120, 0.3)'
+                color: 'rgba(255, 0, 0, 0.3)' // 顶部透明度较高
               }, {
                 offset: 1,
-                color: 'rgba(255, 80, 120, 0.05)'
+                color: 'rgba(255, 0, 0, 0.05)' // 底部透明度较低
               }]
             }
           },
@@ -682,6 +702,7 @@ var TrendChart = /*#__PURE__*/function (_Component) {
             }
           }
         }],
+        // 提示框配置
         tooltip: {
           trigger: 'axis',
           axisPointer: {

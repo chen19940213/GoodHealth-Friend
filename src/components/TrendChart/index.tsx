@@ -99,7 +99,7 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
     }
 
     // 处理当前月数据
-    const currentMonthWeights = dates.map((date, index) => {
+    const currentMonthWeights = dates.map((_, index) => {
       const day = index + 1;
       const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const data = currentMonthData.find(d => d.date === dateStr);
@@ -107,7 +107,7 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
     });
 
     // 处理上月数据
-    const lastMonthWeights = dates.map((date, index) => {
+    const lastMonthWeights = dates.map((_, index) => {
       const day = index + 1;
       const lastMonth = month === 1 ? 12 : month - 1;
       const lastYear = month === 1 ? year - 1 : year;
@@ -116,39 +116,42 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
       return data ? data.weight : null;
     });
 
+    // 计算初始显示范围（显示前7天）
+    const initialEndPercent = daysInMonth > 7 ? (7 / daysInMonth) * 100 : 100;
+
     const option = {
+      // 标题、图例等配置
       legend: {
-        data: ['本月重量', '上月体重'],
-        top: 10,
-        textStyle: {
-          fontSize: 12,
-        },
+        data: ['本月重量', '上月体重']
       },
       grid: {
         left: '3%',
         right: '4%',
         bottom: '15%',
-        containLabel: true,
+        containLabel: true
       },
+      // X 轴配置
       xAxis: {
         type: 'category',
         data: dates,
-        boundaryGap: false,
+        boundaryGap: false  // 数据点对齐刻度线
       },
+      // Y 轴配置
       yAxis: {
         type: 'value',
         name: '公斤',
         min: 0,
-        max: 90,
+        max: 90
       },
+      // 数据缩放配置 - 关键部分
       dataZoom: [
         {
-          type: 'slider',
-          xAxisIndex: 0,
-          start: 0,
-          end: (7 / daysInMonth) * 100,
-          height: 20,
-          bottom: 10,
+          type: 'slider',  // 滑块型数据缩放组件
+          xAxisIndex: 0,  // 控制第 0 个 X 轴
+          start: 0,       // 初始显示范围起始位置（百分比）
+          end: initialEndPercent,  // 初始显示范围结束位置（显示前 7 条）
+          height: 20,      // 滑块高度
+          bottom: 10,      // 距离底部距离
           handleIcon: 'path://M30.9,48.6L16.8,34.5c-0.6-0.6-0.6-1.5,0-2.1L30.9,18.3c0.6-0.6,1.5-0.6,2.1,0l14.1,14.1c0.6,0.6,0.6,1.5,0,2.1L33,48.6C32.4,49.2,31.5,49.2,30.9,48.6z',
           handleSize: '80%',
           handleStyle: {
@@ -156,37 +159,46 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
             shadowBlur: 3,
             shadowColor: 'rgba(0, 0, 0, 0.6)',
             shadowOffsetX: 2,
-            shadowOffsetY: 2,
+            shadowOffsetY: 2
           },
           textStyle: {
-            color: '#999',
+            color: '#999'
           },
           borderColor: '#ccc',
           fillerColor: 'rgba(0,0,0,0.1)',
           dataBackground: {
             lineStyle: {
-              color: '#ccc',
+              color: '#ccc'
             },
             areaStyle: {
-              color: 'rgba(0,0,0,0.1)',
-            },
+              color: 'rgba(0,0,0,0.1)'
+            }
           },
           selectedDataBackground: {
             lineStyle: {
-              color: '#409EFF',
+              color: '#409EFF'
             },
             areaStyle: {
-              color: 'rgba(64,158,255,0.2)',
-            },
+              color: 'rgba(64,158,255,0.2)'
+            }
           },
+          // 支持触摸拖动
+          moveHandleSize: 8,
+          moveOnMouseMove: true,
+          preventDefaultMouseMove: true
         },
         {
-          type: 'inside',
+          type: 'inside',  // 内置型数据缩放，支持触摸拖动和平移
           xAxisIndex: 0,
           start: 0,
-          end: (7 / daysInMonth) * 100,
-        },
+          end: initialEndPercent,
+          // 支持触摸操作
+          zoomOnMouseWheel: true,
+          moveOnMouseMove: true,
+          moveOnMouseWheel: true
+        }
       ],
+      // 系列配置
       series: [
         {
           name: '本月重量',
@@ -196,12 +208,13 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
           symbol: 'circle',
           symbolSize: 8,
           itemStyle: {
-            color: '#FF5078',
+            color: '#ff0000'
           },
           lineStyle: {
-            color: '#FF5078',
-            width: 2,
+            color: '#ff0000',
+            width: 2
           },
+          // 关键：添加底部阴影
           areaStyle: {
             color: {
               type: 'linear',
@@ -212,22 +225,22 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
               colorStops: [
                 {
                   offset: 0,
-                  color: 'rgba(255, 80, 120, 0.3)',
+                  color: 'rgba(255, 0, 0, 0.3)'  // 顶部透明度较高
                 },
                 {
                   offset: 1,
-                  color: 'rgba(255, 80, 120, 0.05)',
-                },
-              ],
-            },
+                  color: 'rgba(255, 0, 0, 0.05)'  // 底部透明度较低
+                }
+              ]
+            }
           },
           emphasis: {
             focus: 'series',
             itemStyle: {
               borderWidth: 2,
-              borderColor: '#fff',
-            },
-          },
+              borderColor: '#fff'
+            }
+          }
         },
         {
           name: '上月体重',
@@ -237,30 +250,31 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
           symbol: 'circle',
           symbolSize: 8,
           itemStyle: {
-            color: '#999999',
+            color: '#999999'
           },
           lineStyle: {
             color: '#999999',
-            width: 2,
+            width: 2
           },
           emphasis: {
             focus: 'series',
             itemStyle: {
               borderWidth: 2,
-              borderColor: '#fff',
-            },
-          },
-        },
+              borderColor: '#fff'
+            }
+          }
+        }
       ],
+      // 提示框配置
       tooltip: {
         trigger: 'axis',
         axisPointer: {
           type: 'cross',
           label: {
-            backgroundColor: '#6a7985',
-          },
-        },
-      },
+            backgroundColor: '#6a7985'
+          }
+        }
+      }
     };
 
     this.chart.setOption(option);
@@ -269,6 +283,7 @@ export default class TrendChart extends Component<TrendChartProps, TrendChartSta
   render() {
     return (
       <View className="trend-chart">
+        {/* @ts-ignore */}
         <ec-canvas
           id={this.canvasId}
           canvas-id={this.canvasId}

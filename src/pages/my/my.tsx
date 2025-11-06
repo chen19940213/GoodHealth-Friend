@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { observer } from 'mobx-react';
-import { View, Text, Button } from '@tarojs/components';
+import { View, Text, Button, Image } from '@tarojs/components';
 import {
-
   OssImage,
   Native,
   SafeAreaView,
@@ -18,9 +17,23 @@ import { noListIcon, settingsIcon } from '@/assets/index';
 import CardCell from '@/components/cardCell';
 import { requestWxLoginMockApi } from '@/services/apis/login.api';
 import PageSkeleton from '@/components/PageSkeleton';
+import SocialModal from '@/components/SocialModal';
+
+interface MyState {
+  showSocialModal: boolean;
+  socialModalType: 'xiaohongshu' | 'group';
+}
 
 @observer
-export default class My extends Component {
+export default class My extends Component<{}, MyState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      showSocialModal: false,
+      socialModalType: 'xiaohongshu',
+    };
+  }
+
   componentDidMount() {
     // 监听登录态变化
     loginModel.checkLogin(
@@ -146,6 +159,43 @@ export default class My extends Component {
     }
   };
 
+  // 跳转到个人资料页
+  handleProfileClick = () => {
+    Taro.navigateTo({
+      url: '/pages/profile/profile',
+    });
+  };
+
+  // 显示关注小红书弹窗
+  handleXiaohongshuClick = () => {
+    this.setState({
+      showSocialModal: true,
+      socialModalType: 'xiaohongshu',
+    });
+  };
+
+  // 显示加群交流弹窗
+  handleGroupClick = () => {
+    this.setState({
+      showSocialModal: true,
+      socialModalType: 'group',
+    });
+  };
+
+  // 关闭弹窗
+  handleCloseSocialModal = () => {
+    this.setState({
+      showSocialModal: false,
+    });
+  };
+
+  // 跳转到反馈页面
+  handleFeedbackClick = () => {
+    Taro.navigateTo({
+      url: '/pages/feedback/feedback',
+    });
+  };
+
   renderNoList = () => (
       <View className='no-list-container'>
         <Image src={noListIcon} className='no-list-icon' />
@@ -165,79 +215,102 @@ export default class My extends Component {
     const userNewId = (loginResult as any)?.userNewId || (loginResult as any)?.userId || '';
     const isLogin = !!token;
 
+    const { showSocialModal, socialModalType } = this.state;
+
     return (
       <PageSkeleton className='page-my-view' onScrollToLower={this.handleScrollToLower}>
-        <Fragment key="scroll">
-            {/* 顶部渐变背景区域 */}
-            <View className='top-gradient-bg' />
+        <Fragment key="body">
+          <SocialModal
+            visible={showSocialModal}
+            type={socialModalType}
+            onClose={this.handleCloseSocialModal}
+          />
+          {/* 顶部渐变背景区域 */}
+          <View className='top-gradient-bg' />
 
-            {/* 用户信息区域 */}
-            <View className='user-section'>
-              <View className='user-info-container'>
-                <OssImage
-                  className='user-avatar'
-                  width={79}
-                  height={79}
-                  src={avatar || defaultUserAvatar}
-                />
-                <View className='user-info'>
-                  {isLogin ? (
-                    <>
-                      <View className='user-nickname'>{nickname || '女王陛下'}</View>
-                    </>
-                  ) : (
-                    <>
-                      <View className='login-text-btn' onClick={this.handleLoginClick}>
-                        去登录
-                      </View>
-                    </>
-                  )}
-                </View>
-              </View>
-              <View className='settings-icon-wrapper' onClick={this.handleSettingsClick}>
-                <View className='settings-icon' />
-              </View>
-            </View>
-
-            {/* 减肥原因 */}
-            <View className='reason-section'>
-              <Text className='reason-text'>减肥原因：身体原因血脂高，希望恢复健康，加油！</Text>
-            </View>
-
-            {/* 标签区域 */}
-            <View className='tags-section'>
-              <View className='tag-item'>
-                <View className='tag-icon'>🏷️</View>
-                <Text className='tag-text'>中国女人</Text>
-              </View>
-              <View className='tag-item'>
-                <Text className='tag-text'>163</Text>
-              </View>
-              <View className='tag-item'>
-                <Text className='tag-text'>45</Text>
+          {/* 用户信息区域 */}
+          <View className='user-section'>
+            <View className='user-info-container' onClick={this.handleProfileClick}>
+              <OssImage
+                className='user-avatar'
+                width={158}
+                height={158}
+                src={avatar || defaultUserAvatar}
+              />
+              <View className='user-info'>
+                {isLogin ? (
+                  <>
+                    <View className='user-nickname'>
+                      {nickname || '女王陛下'}
+                      <Text className='edit-icon'>✏️</Text>
+                    </View>
+                  </>
+                ) : (
+                  <>
+                    <View className='login-text-btn' onClick={this.handleLoginClick}>
+                      去登录
+                    </View>
+                  </>
+                )}
               </View>
             </View>
-
-            {/* 反馈卡片 */}
-            <View className='feedback-card'>
-              <View className='feedback-avatar' />
-              <View className='feedback-content'>
-                <Text className='feedback-title'>截止目前，好健友已有327939位朋友</Text>
-                <Text className='feedback-subtitle'>累计减肥224434斤，折合288头老母猪！</Text>
-              </View>
+            <View className='settings-icon-wrapper' onClick={this.handleSettingsClick}>
+              <View className='settings-icon' />
             </View>
+          </View>
 
-            {/* 操作按钮 */}
-            <View className='action-buttons'>
-              <Button className='action-btn primary' onClick={() => {}}>
-                关注小红书
-              </Button>
-              <Button className='action-btn primary' onClick={() => {}}>
-                加群交流
-              </Button>
+          {/* 标签区域 */}
+          <View className='tags-section'>
+            <View className='tag-item'>
+              <Text className='tag-icon'>🔍</Text>
+              <Text className='tag-text'>中国女人</Text>
             </View>
+            <View className='tag-item'>
+              <Text className='tag-text'>163</Text>
+            </View>
+            <View className='tag-item'>
+              <Text className='tag-text'>45</Text>
+            </View>
+          </View>
 
-            <SafeAreaView safeAreaInsetBottom />
+          {/* 减肥原因 */}
+          <View className='reason-section'>
+            <Text className='reason-text'>减肥原因: 身体原因血脂高, 希望恢复健康, 加油!</Text>
+          </View>
+
+          {/* 反馈卡片 */}
+          <View className='feedback-card' onClick={this.handleFeedbackClick}>
+            <View className='feedback-pig' />
+            <View className='feedback-content'>
+              <Text className='feedback-welcome'>欢迎大家反馈宝贵建议!</Text>
+              <Text className='feedback-action'>我要反馈!</Text>
+            </View>
+            <View className='feedback-button'>
+              <Text className='feedback-button-text'>去反馈 &gt;</Text>
+            </View>
+          </View>
+
+          {/* 统计数据卡片 */}
+          <View className='stats-card'>
+            <Text className='stats-text'>
+              截止目前, 好健友已有<Text className='stats-highlight'>327939</Text>位朋友
+            </Text>
+            <Text className='stats-text'>
+              累计减肥<Text className='stats-highlight'>224434</Text>斤, 折合<Text className='stats-highlight'>288</Text>头老母猪!
+            </Text>
+          </View>
+
+          {/* 操作按钮 */}
+          <View className='action-buttons'>
+            <Button className='action-btn primary' onClick={this.handleXiaohongshuClick}>
+              关注小红书
+            </Button>
+            <Button className='action-btn primary' onClick={this.handleGroupClick}>
+              加群交流
+            </Button>
+          </View>
+
+          <SafeAreaView safeAreaInsetBottom />
         </Fragment>
       </PageSkeleton>
     );

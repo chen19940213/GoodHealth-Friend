@@ -1,144 +1,240 @@
 .page-profile-view {
-  background: #FFF;
+  background: #FFFFFF;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 
-  // 顶部导航栏
-  .nav-bar {
+  // Header 区域样式覆盖
+  :global(.page-skeleton__header) {
+    height: auto !important;
+    background: #FFFFFF;
     position: relative;
-    height: 162px; // 81px * 2
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 22px; // 11px * 2
+    z-index: 10;
+  }
 
-    .back-btn {
-      position: absolute;
-      left: 28px; // 14px * 2
-      bottom: 22px; // 11px * 2
-      width: 33.2px; // 16.6px * 2
-      height: 30px; // 15px * 2
+  .nav-bar {
+    background: #FFFFFF;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    .nav-back {
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       cursor: pointer;
 
       .back-icon {
-        width: 20px; // 10px * 2
-        height: 36px; // 18px * 2
-        border-left: 2px solid #000;
-        border-bottom: 2px solid #000;
-        transform: rotate(45deg);
+        font-size: 32px;
+        color: #333;
+        font-weight: 300;
+        line-height: 1;
       }
     }
 
     .nav-title {
-      font-size: 32px; // 16px * 2
-      font-weight: 400;
-      color: #000;
-      line-height: 1.4;
+      font-size: 32px;
+      font-weight: 500;
+      color: #333;
+      flex: 1;
+      text-align: center;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-end;
+
+      .action-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F5F5F5;
+        border-radius: 50%;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        .icon-text {
+          font-size: 20px;
+          color: #333;
+          line-height: 1;
+        }
+      }
     }
   }
 
   // 用户头像区域
   .avatar-section {
-    padding: 106px 0 80px; // 53px * 2, 40px * 2
+    padding: 120px 0 60px;
     display: flex;
     justify-content: center;
 
     .avatar-container {
       position: relative;
-      width: 160px; // 80px * 2
-      height: 160px; // 80px * 2
+      width: 160px;
+      height: 160px;
 
       .user-avatar {
-        width: 160px; // 80px * 2
-        height: 160px; // 80px * 2
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
-        background: #D3F8FF;
+        background: #FFD5DF;
         border: none;
       }
 
-   
+      .avatar-edit-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: #409EFF;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+
+        .edit-icon {
+          font-size: 24px;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 
-  // 设置项
-  .settings-item {
-    margin: 0 36px; // 18px * 2
-    padding: 0 44px; // 9px * 2, 22px * 2
-    background: #F5F5F5;
-    border-radius: 32px; // 16px * 2
-    display: flex;
-    align-items: center;
-    height: 112px; // 56px * 2
-    cursor: pointer;
+  // 表单区域
+  .form-section {
+    padding: 0 24px 40px;
 
-    .item-label {
-      font-size: 32px; // 16px * 2
-      font-weight: 400;
-      color: #879099;
-      line-height: 1.4;
-      margin-right: 32px; // 16px * 2
-    }
+    .form-item {
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
 
-    .item-value {
-      flex: 1;
-      font-size: 32px; // 16px * 2
-      font-weight: 400;
-      color: #242729;
-      line-height: 1.4;
-    }
-
-    .nickname-input {
-      flex: 1;
-      font-size: 32px; // 16px * 2
-      font-weight: 400;
-      color: #242729;
-      line-height: 1.4;
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 0;
-      margin: 0;
-
-      &::placeholder {
-        color: #879099;
-      }
-    }
-
-    .item-arrow {
-      width: 24px; // 12px * 2
-      height: 24px; // 12px * 2
-      position: relative;
-      margin-left: 16px;
-
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        background: #879099;
+      .item-label {
+        font-size: 28px;
+        font-weight: 500;
+        color: #333;
       }
 
-      // 上半部分
-      &::before {
-        width: 2px;
-        height: 10.66px; // 5.33px * 2
-        top: 2.64px; // 1.32px * 2
-        right: 6.82px; // 3.41px * 2
-        transform: rotate(45deg);
+      .form-input {
+        height: 88px;
+        padding: 0 24px;
+        background: #F5F5F5;
+        border-radius: 16px;
+        font-size: 28px;
+        color: #333;
+        box-sizing: border-box;
+
+        &::placeholder {
+          color: #999;
+        }
       }
 
-      // 下半部分
-      &::after {
-        width: 2px;
-        height: 10.66px; // 5.33px * 2
-        bottom: 2.64px; // 1.32px * 2
-        right: 6.82px; // 3.41px * 2
-        transform: rotate(-45deg);
+      .gender-buttons {
+        display: flex;
+        gap: 16px;
+
+        .gender-btn {
+          flex: 1;
+          height: 88px;
+          padding: 0 24px;
+          background: #F5F5F5;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &.active {
+            background: #E3F2FD;
+
+            .gender-icon {
+              color: #2196F3;
+            }
+
+            .gender-text {
+              color: #2196F3;
+              font-weight: 600;
+            }
+          }
+
+          .gender-icon {
+            font-size: 32px;
+            color: #666;
+          }
+
+          .gender-text {
+            font-size: 28px;
+            color: #666;
+          }
+        }
+      }
+
+      .persona-tags {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .persona-tag {
+          height: 64px;
+          padding: 0 24px;
+          background: #F5F5F5;
+          border-radius: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &.active {
+            background: #FF5078;
+
+            .tag-text {
+              color: #FFFFFF;
+              font-weight: 600;
+            }
+          }
+
+          .tag-text {
+            font-size: 24px;
+            color: #666;
+          }
+        }
+      }
+
+      .textarea-wrapper {
+        .form-textarea {
+          width: 100%;
+          min-height: 200px;
+          padding: 24px;
+          background: #F5F5F5;
+          border-radius: 16px;
+          font-size: 28px;
+          color: #333;
+          box-sizing: border-box;
+          border: none;
+          outline: none;
+          line-height: 1.5;
+
+          &::placeholder {
+            color: #999;
+          }
+        }
       }
     }
   }
 }
-

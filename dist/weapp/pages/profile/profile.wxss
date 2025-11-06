@@ -2,45 +2,71 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/profile/profile.scss ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .page-profile-view {
-  background: #FFF;
+  background: #FFFFFF;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+.page-profile-view :global(.page-skeleton__header) {
+  height: auto !important;
+  background: #FFFFFF;
+  position: relative;
+  z-index: 10;
 }
 .page-profile-view .nav-bar {
-  position: relative;
-  height: 162rpx;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 22rpx;
-}
-.page-profile-view .nav-bar .back-btn {
-  position: absolute;
-  left: 28rpx;
-  bottom: 22rpx;
-  width: 33.2rpx;
-  height: 30rpx;
+  background: #FFFFFF;
+  padding: 0 24rpx;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.page-profile-view .nav-bar .nav-back {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-.page-profile-view .nav-bar .back-btn .back-icon {
-  width: 20rpx;
-  height: 36rpx;
-  border-left: 2rpx solid #000;
-  border-bottom: 2rpx solid #000;
-  transform: rotate(45deg);
+.page-profile-view .nav-bar .nav-back .back-icon {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
 }
 .page-profile-view .nav-bar .nav-title {
   font-size: 32rpx;
-  font-weight: 400;
-  color: #000;
-  line-height: 1.4;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+.page-profile-view .nav-bar .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  justify-content: flex-end;
+}
+.page-profile-view .nav-bar .nav-actions .action-icon {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F5F5;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.page-profile-view .nav-bar .nav-actions .action-icon .icon-text {
+  font-size: 20rpx;
+  color: #333;
+  line-height: 1;
 }
 .page-profile-view .avatar-section {
-  padding: 106rpx 0 80rpx;
+  padding: 120rpx 0 60rpx;
   display: flex;
   justify-content: center;
 }
@@ -53,73 +79,134 @@
   width: 160rpx;
   height: 160rpx;
   border-radius: 50%;
-  background: #D3F8FF;
+  background: #FFD5DF;
   border: none;
 }
-.page-profile-view .settings-item {
-  margin: 0 36rpx;
-  padding: 0 44rpx;
+.page-profile-view .avatar-section .avatar-container .avatar-edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48rpx;
+  height: 48rpx;
+  background: #409EFF;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3rpx solid #FFFFFF;
+  box-sizing: border-box;
+}
+.page-profile-view .avatar-section .avatar-container .avatar-edit-icon .edit-icon {
+  font-size: 24rpx;
+  color: #FFFFFF;
+}
+.page-profile-view .form-section {
+  padding: 0 24rpx 40rpx;
+}
+.page-profile-view .form-section .form-item {
+  margin-bottom: 32rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+.page-profile-view .form-section .form-item .item-label {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+}
+.page-profile-view .form-section .form-item .form-input {
+  height: 88rpx;
+  padding: 0 24rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+.page-profile-view .form-section .form-item .form-input::-moz-placeholder {
+  color: #999;
+}
+.page-profile-view .form-section .form-item .form-input::placeholder {
+  color: #999;
+}
+.page-profile-view .form-section .form-item .gender-buttons {
+  display: flex;
+  gap: 16rpx;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn {
+  flex: 1;
+  height: 88rpx;
+  padding: 0 24rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn.active {
+  background: #E3F2FD;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn.active .gender-icon {
+  color: #2196F3;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn.active .gender-text {
+  color: #2196F3;
+  font-weight: 600;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn .gender-icon {
+  font-size: 32rpx;
+  color: #666;
+}
+.page-profile-view .form-section .form-item .gender-buttons .gender-btn .gender-text {
+  font-size: 28rpx;
+  color: #666;
+}
+.page-profile-view .form-section .form-item .persona-tags {
+  display: flex;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+.page-profile-view .form-section .form-item .persona-tags .persona-tag {
+  height: 64rpx;
+  padding: 0 24rpx;
   background: #F5F5F5;
   border-radius: 32rpx;
   display: flex;
   align-items: center;
-  height: 112rpx;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.3s;
 }
-.page-profile-view .settings-item .item-label {
-  font-size: 32rpx;
-  font-weight: 400;
-  color: #879099;
-  line-height: 1.4;
-  margin-right: 32rpx;
+.page-profile-view .form-section .form-item .persona-tags .persona-tag.active {
+  background: #FF5078;
 }
-.page-profile-view .settings-item .item-value {
-  flex: 1;
-  font-size: 32rpx;
-  font-weight: 400;
-  color: #242729;
-  line-height: 1.4;
+.page-profile-view .form-section .form-item .persona-tags .persona-tag.active .tag-text {
+  color: #FFFFFF;
+  font-weight: 600;
 }
-.page-profile-view .settings-item .nickname-input {
-  flex: 1;
-  font-size: 32rpx;
-  font-weight: 400;
-  color: #242729;
-  line-height: 1.4;
-  background: transparent;
+.page-profile-view .form-section .form-item .persona-tags .persona-tag .tag-text {
+  font-size: 24rpx;
+  color: #666;
+}
+.page-profile-view .form-section .form-item .textarea-wrapper .form-textarea {
+  width: 100%;
+  min-height: 200rpx;
+  padding: 24rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  color: #333;
+  box-sizing: border-box;
   border: none;
   outline: none;
-  padding: 0;
-  margin: 0;
+  line-height: 1.5;
 }
-.page-profile-view .settings-item .nickname-input::-moz-placeholder {
-  color: #879099;
+.page-profile-view .form-section .form-item .textarea-wrapper .form-textarea::-moz-placeholder {
+  color: #999;
 }
-.page-profile-view .settings-item .nickname-input::placeholder {
-  color: #879099;
-}
-.page-profile-view .settings-item .item-arrow {
-  width: 24rpx;
-  height: 24rpx;
-  position: relative;
-  margin-left: 16rpx;
-}
-.page-profile-view .settings-item .item-arrow::before, .page-profile-view .settings-item .item-arrow::after {
-  content: "";
-  position: absolute;
-  background: #879099;
-}
-.page-profile-view .settings-item .item-arrow::before {
-  width: 2rpx;
-  height: 10.66rpx;
-  top: 2.64rpx;
-  right: 6.82rpx;
-  transform: rotate(45deg);
-}
-.page-profile-view .settings-item .item-arrow::after {
-  width: 2rpx;
-  height: 10.66rpx;
-  bottom: 2.64rpx;
-  right: 6.82rpx;
-  transform: rotate(-45deg);
+.page-profile-view .form-section .form-item .textarea-wrapper .form-textarea::placeholder {
+  color: #999;
 }
